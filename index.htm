@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Fabio Arceri's home page</title>
+		<style type="text/css">
+			#container {
+				position:fixed !important;
+				position:absolute;
+				top:0;
+				right:0;
+				bottom:0;
+				left:0;
+				border:0px solid red;
+			}
+
+			a img {
+			  display: block;
+			  -webkit-border-radius: 6px;
+			  -moz-border-radius: 6px;
+			  border-radius: 6px;
+			  border: none;
+			  width: 100%;
+			}
+
+			a {
+			  position: relative;
+			  display: block;
+			  float: left;
+			  padding: 0 5px 5px 0;
+			  text-decoration: none;
+			}
+
+			a:before {
+			  position: absolute;
+			  background-color: rgba(0, 0, 0, 0.65);
+			  -webkit-border-radius: 6px;
+			  -moz-border-radius: 6px;
+			  border-radius: 6px;
+			  color: #FFFFFF;
+			  content: attr(data-icon-text);
+			  display: block;
+			  left: 20%;
+			  opacity: 0;
+			  padding: 2px 5px;
+			  top: 0;
+			  white-space: nowrap;
+			  z-index: 10;
+			}
+
+			a,
+			a:before {
+			  -webkit-transition: all linear 300ms;
+			  -moz-transition: all linear 300ms;
+			  -o-transition: all linear 300ms;
+			  transition: all linear 300ms;
+			}
+
+			a:hover:before {
+			  opacity: 1;
+			  top: -20%;
+			}
+
+			span:hover a {
+			  opacity: 0.35;
+			}
+
+			span a:hover {
+			  opacity: 1;
+			}
+
+			a img:first-child,
+			span:hover a img:first-child + img,
+			  span:hover a:hover img:first-child {
+			  display: none;
+			}
+
+			span:hover a img:first-child,
+			span:hover a:hover img:first-child + img {
+			  display: block;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="container">
+			<!--<div style="border:0px solid black; width:90px; position:absolute; z-index:1;"><img style="width:100%" src="images/agent-message.gif"></div>-->
+			<!--<div style="border:0px solid black; width:35%;top:9%; left:32.5%; position:absolute; z-index:0;"><img style="width:100%;" src="images/homepage.png"></div>-->
+
+			<div style="background:transparent; width:100%; top:125px; margin-left:0%; position:absolute; z-index:2">
+				<span style="display: table; margin: 0 auto; background:transparent; width:900px">
+					<img style="padding-left:490px; width:10%;" src="images/agent-message.gif">
+				</span>
+			</div>
+
+			<div style="background:transparent; width:100%; top:100px; margin-left:0%; position:absolute; text-align:center">
+				<span style="display: table; margin: 0 auto; background:transparent; width:900px">
+					<img style="width:72%;" src="images/homepage.png">
+				</span>
+			</div>
+
+			<div style="background: black; width:100%; bottom:0%; margin-left:0%; height:80px; position:absolute; ">
+				<span style="display: table; margin: 0 auto; background:transparent; padding-top:9px; padding-left:6px; height:100%; text-align:center">
+					<a target="_self" href="#" data-icon-text="fabio.arceri@gmail.com"><img src="images/bw-email.png" alt=""><img src="images/email.png" alt=""></a>
+					<a target="_blank" href="https://goo.gl/BO8qpI" data-icon-text="Curriculum Vitae"><img src="images/bw-cv.png" alt=""><img src="images/cv.png" alt=""></a>
+					<a target="_blank" href="https://www.linkedin.com/in/fabioarceri" data-icon-text="LinkedIn"><img src="images/bw-linkedin.png" alt=""><img src="images/linkedin.png" alt=""></a>
+					<a target="_blank" href="https://fabioarceri.blogspot.it/" data-icon-text="Blogger"><img src="images/bw-blogger.png" alt=""><img src="images/blogger.png" alt=""></a>
+					<a target="_blank" href="https://plus.google.com/u/0/+FabioArceri" data-icon-text="Google+"><img src="images/bw-googleplus.png" alt=""><img src="images/googleplus.png" alt=""></a>
+					<a target="_blank" href="https://www.facebook.com/nicolofabio.arceri" data-icon-text="Facebook"><img src="images/bw-facebook.png" alt=""><img src="images/facebook.png" alt=""></a>
+					<a target="_blank" href="https://twitter.com/fnarceri" data-icon-text="Twitter"><img src="images/bw-twitter.png" alt=""><img src="images/twitter.png" alt=""></a>
+					<a target="_self" href="#" data-icon-text="Github (Coming soon...)"><img src="images/bw-github2.png" alt=""><img src="images/github2.png" alt=""></a>
+					<a target="_blank" href="https://www.slideshare.net/nicolofabioarcerihttps://www.xmind.net/share/fabio.arceri/https://www.slideshare.net/nicolofabioarceri" data-icon-text="XMind"><img src="images/bw-xmind.png" alt=""><img src="images/xmind.png" alt=""></a>
+				</span>
+			</div>
+		</div>
+	</body>
+</html>
+
