@@ -201,7 +201,7 @@
         position:absolute;
         width:100%;
         text-align:center;
-        top:1%;
+        top:10px;
         height:16px;
         z-index:100;
     }
@@ -402,7 +402,7 @@
         
         #slidearrows a
         {
-            margin-top:-10%;
+            margin-top:-32px;
         }
 
         .prev
@@ -458,15 +458,14 @@
             <div id="csection" style="top:0px;" class="flex-direction">
 
                 <!------------------------------ PIC&BIO SECTION ------------------------------>
-                <div id="pic" style="flex-direction:column;" class="flex-direction">
-                    <img src="images/fabiolinkedin.png">
+                <div id="pic" style="flex-direction:column; overflow:auto;" class="flex-direction">
+                    <img style="margin-top:32px;" src="images/fabiolinkedin.png">
                     <div>
-                        <span style="line-height:22px;">
-                            <a class="link" href="index.htm"><span style="font-size:20px;line-height:50px;"><strong>Fabio Arceri</strong></span></a><br>
-                            MASTER's DEGREE in <strong>COMPUTER SCIENCE</strong><br>
-                            GOOGLE <strong>COMMUNITY MANAGER</strong> at&nbsp;&nbsp;&nbsp;<a target="_blank" href="https://developers.google.com/community/gdg"><img style="vertical-align:middle; width:58px; padding-top:4px;" src="images/gdg.png"></a><!--<a style="" href="">❰❱ GDG</a>--></span><br>
-                            <br>
-                            In <span style="color:red">♥</span> with algorithms<span style="color:red">,</span> technical writing<span style="color:red">,</span> public speaking<span style="color:red">,</span> communities<span style="color:red">,</span> running<span style="color:red">,</span> joking<span style="color:red">,</span> pizza<span style="color:red">,</span> playing music<span style="color:red">,</span> retro-gaming<span style="color:red">,</span> and <a class="link" target="_blank" href="https://federicascarso.blogspot.com/"><strong>Federica</strong></a>.
+                    <a class="link" href="index.htm"><span style="font-size:20px; color:#333333"><strong>Fabio Arceri</strong></span></a><br><br>
+                    <span>MASTER's DEGREE in <strong><a class="link" target="_blank" href="http://web.dmi.unict.it/">COMPUTER SCIENCE</a></strong><span><br>
+                    <span>GOOGLE <strong><a class="link" target="_blank" href="https://developers.google.com/community/gdg">COMMUNITY MANAGER</a></strong> at&nbsp;&nbsp;&nbsp;<img style="vertical-align:middle; width:58px; padding-top:4px;" src="images/gdg.png"></span><br><br>
+                    <!--
+                    <span>In <span style="color:red">♥</span> with algorithms<span style="color:red">,</span> technical writing<span style="color:red">,</span> public speaking<span style="color:red">,</span> communities<span style="color:red">,</span> running<span style="color:red">,</span> joking<span style="color:red">,</span> pizza<span style="color:red">,</span> playing music<span style="color:red">,</span> retro-gaming<span style="color:red">,</span> and <a class="link" target="_blank" href="https://federicascarso.blogspot.com/"><strong>Federica</strong></a>.</span>-->
                     </div>                   
                 </div>
 
@@ -485,7 +484,7 @@
                 </div>
                 
                 <!------------------------------ SLIDER ARROWS ------------------------------>
-               <div id="slidearrows" style="">
+               <div id="slidearrows">
                     <a href="#top" style="text-decoration:none;" class="prev" onclick="plusSlides(-1)">&#10094;</a>
                     <a href="#top" style="text-decoration:none;" class="next" onclick="plusSlides(1)">&#10095;</a>
                 </div>                               
@@ -1275,7 +1274,7 @@
             <!------------------------------ FOOTER SECTION ------------------------------>
             <div id="lowsection" style="">
                 <img style="width:100%; height:2px; padding:0px; margin:0px; position:absolute; top:0px" src="images/colline.png">
-                <span class="footer">
+                <span class="footer" style="margin-top:5px; margin-bottom:0px">
                 <!--
                     <a class="footer" target="_blank" href="https://goo.gl/BO8qpI" data-icon-text="Curriculum Vitae"><img class="footer" src="images/bw-cv.png" alt=""><img class="footer" src="images/cv.png" alt=""></a>-->
                     <a class="footer" target="_self" href="fabio.arceriREMOVE@gmail.com" data-icon-text="fabio.arceri@gmail.com">
