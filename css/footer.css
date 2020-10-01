@@ -141,3 +141,11 @@
 
     }
 
+    @media only screen and (orientation: portrait)
+    {
+        a.footer
+        {
+            margin-top:11px;
+            margin-bottom:0px;
+        }
+    }
