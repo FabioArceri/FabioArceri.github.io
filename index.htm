@@ -1,202 +1,1321 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Fabio Arceri's home page</title>
-		<style type="text/css">
-			#container {
-				position:fixed !important;
-				position:absolute;
-				top:0;
-				right:0;
-				bottom:0;
-				left:0;
-				border:0px solid red;
-			}
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabio Arceri's home page</title>
+    <link rel="stylesheet" href="css/footer.css">    
 
-			a.footer img.footer {
-			  display: block;
-			  -webkit-border-radius: 6px;
-			  -moz-border-radius: 6px;
-			  border-radius: 6px;
-			  border: none;
-			  width: 100%;
-			}
+    <style type="text/css">
+    
+    a.link, a.link:visited
+    {
+        text-decoration:underline;
+        text-decoration-style: dotted;
+        color: #888888;
+    }
+    
+    .flex-direction
+    {
+        flex-direction:row;
+    }
 
-			a.footer {
-			  position: relative;
-			  display: block;
-			  float: left;
-			  padding: 0 5px 5px 0;
-			  text-decoration: none;
-			}
+    .flex-direction-inv
+    {
+        flex-direction:column;
+    }
 
-			a.footer:before {
-			  position: absolute;
-			  background-color: rgba(0, 0, 0, 0.65);
-			  -webkit-border-radius: 6px;
-			  -moz-border-radius: 6px;
-			  border-radius: 6px;
-			  color: #FFFFFF;
-			  content: attr(data-icon-text);
-			  display: block;
-			  left: 20%;
-			  opacity: 0;
-			  padding: 2px 5px;
-			  top: 0;
-			  white-space: nowrap;
-			  z-index: 10;
-			}
+    #container
+    {
+        position:absolute;
+        background:#f1f1f1;
+        background:#FFFFFF;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        margin:0px;
+        padding:0px;
+    }
+    
+    #csection
+    {
+        position:absolute;
+/*        top:5%;*/
+        top:0px;
+        margin-left:5%;
+        margin-right:5%;
+        padding:0px;
+        border:1px solid #f1f1f1;
+/*        box-shadow: 0px 2px 8px #d5d5d5;*/
+/*        -webkit-box-shadow: 0px 2px 8px #d5d5d5;*/
+        background:white;
+/*        width:700px;*/
+        width:100%;
+/*        height:67%;*/
+        height:77%;
+        height:100%;
+        display:flex;
+        justify-content:center;
+        align-items:top;
 
-			a.footer,
-			a.footer:before {
-			  -webkit-transition: all linear 300ms;
-			  -moz-transition: all linear 300ms;
-			  -o-transition: all linear 300ms;
-			  transition: all linear 300ms;
-			}
+/*
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;*/
+    }
+          
+    #pic, #text
+    {
+        font-size:14px;
+        font-family:ubuntu;
+        background:transparent;
+        padding:0px;
+        width:100%;
+/*        position: relative;*/
+        /*
+        */
+        /*
+        padding-left:5px;
+        padding-right:5px;*/
+    }
+    
+    #text
+    {
+        overflow:auto;
+        height:100%;
+        height:72%;
+        display:flex;
+        justify-content:center;
+        align-items:top;
+        margin-top:1%;
+        margin-bottom:2%;        
+    }
+    
+    #pic
+    {
+        background:#eeeeee;
+        height:100%;        
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        margin-top:-5%;
+    }
+        
+    #pic img
+    {
+        width:15%;
+        padding-bottom:0px;
+        padding-bottom:6px;
+        /*
+        padding-top:10px;
+        padding-bottom:5px;*/
+    }
 
-			a.footer:hover:before {
-			  opacity: 1;
-			  top: -20%;
-			}
+    #pic div
+    {        
+        font-size:13px;
+        font-family:ubuntu;
+        text-align:center;
+        width:95%;
+        max-width:516px;
+    }
 
-			span.footer:hover a.footer {
-			  opacity: 0.35;
-			}
+    #sep1, #sep2
+    {
+        height:100%;
+        padding-left:10px;
+        border:0px; 
+        background:lightgray;
+        background:transparent;
+    }
+    
+    #sep1
+    {
+        background:#eeeeee;
+        border-right:1px solid #f1f1f1;
+        border-right:2px dotted #A1A1A1;
+    }
+    
+    #lowsection
+    {
+        /*height:28%;*/
+        height:23%;
+        max-height:100px;
+        width:100%;
+        /*bottom:39px;*/
+        bottom:0px;
+        padding:0px;
+        padding-top:0px;
+        position:absolute;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background:black;
+        flex-direction:column
+    }
+    
+    #lowsection span
+    {
+/*        position:absolute;
+        top:10%;
+        top:0px;*/
+/*        padding-top:10px;*/
+/*        width:100%;*/
+        padding-left:4.5%;
+        width:100%;
+        max-width:900px;
+        margin:0px;
+        height:auto;
+        background:green;
+        background:transparent;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        z-index:2;
+    }
+    
+    #copyr
+    {
+        font-size:12px;
+        font-family:ubuntu;
+        background:blue;
+        background:transparent;
+        color:gray;
+        width:100%;
+        bottom:0px;
+        margin:0%;
+        padding-top:8px;
+        height:auto;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+        /*
+        padding-bottom:4px;
+        padding-top:4px;
+        */
+/*        position:absolute;*/
+        z-index:1;
+    }
+    
+    #slidots
+    {
+        position:absolute;
+        width:100%;
+        text-align:center;
+        top:1%;
+        height:16px;
+        z-index:100;
+    }
 
-			span.footer a.footer:hover {
-			  opacity: 1;
-			}
+    #slidearrows a
+    {
+        margin-top:-8%;
+        z-index:100;
+    }
+    
+    .mySlides
+    {
+        padding-top:10px; width:100%;
+    }
+    
+/*    @media only screen and (max-width: 568px)*/
+/*    @media only screen and (max-width: 870px)*/
+    .prev
+    {
+        margin-left:-10px;
+    }
+    .next
+    {
+        margin-right:2px;
+    }
+    
+    .main-block-exp
+    {
+        width:100%; background:transparent; display:flex; flex-direction:column;
+    }
+    
+    .head-block-exp
+    {
+        width:100%; background:transparent; display:flex; justify-content:center; align-items:center; flex-direction:column;
+    }
+    
+    .skill-desc
+    {
+        line-height:150%; font-size:100%; text-align:left;        
+    }
+    
 
-			a.footer img.footer:first-child,
-			span.footer:hover a.footer img.footer:first-child + img.footer,
-			  span.footer:hover a.footer:hover img.footer:first-child {
-			  display: none;
-			}
+    
+    .subject
+    {
+        font-family: ubuntu;
+        font-size:18px;
+        font-weight:bold;
+        background: darkcyan;
+        width:100%;
+        color:white;
+        text-align:center;
+        padding:4px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+/*        line-height:26px;*/
+    }
+    
+    .skills-block-exp
+    {
+        width:100%;
+        padding-top:12px;
+        padding-bottom:8px;
+    }
+    
+    .skills-block-exp table
+    {
+        width:100%;
+        text-align:left;
+    }
+    
+    .skills-block-exp table tr td:first-child
+    {
+        width:10%;
+        padding-right:8px;
+        vertical-align:top;
+        text-align:center;
+    }
+    
+    div.skills-summary
+    {
+        width:100%;
+        display:flex; justify-content:center; align-items:center;
+    }
+    
+    div.skills-summary table
+    {
+        width:20%;
+    }
 
-			span.footer:hover a.footer img.footer:first-child,
-			span.footer:hover a.footer:hover img.footer:first-child + img.footer {
-			  display: block;
-			}
-			
-			a.header {
-				text-decoration: none;
-				color:inherit;
-				transition:1s;
-			}
-			
-			a.header:hover {
-				color:#d9272d;
-				//color:#94ff53;
-				//color:#fff47f;
-				background:#f1f1f1;
-				padding:12px;
-				border-radius: 20px 20px;
-			}
-			
-			.tooltip {
-				position: relative;
-				display: inline-block;
-				//border-bottom: 1px dotted black;
-			}
+    div.skills-summary table tr td
+    {
+        padding:8px 10px 0px 10px;
+    }
+    
+    .client
+    {
+        line-height:26px;
+        padding-top:14px;
+        width:100%;
+        display:flex; justify-content:center; align-items:center;
+    }
 
-			.tooltip .tooltiptext {
-				visibility: hidden;
-				width: 220px;
-				background-color: #555;
-				color: #fff;
-				text-align: center;
-				border-radius: 6px;
-				padding: 5px 0;
-				position: absolute;
-				z-index: 1;
-				bottom: 125%;
-				left: 50%;
-				margin-left: -110px;
-				opacity: 0;
-				transition: opacity 0.3s;
-			}
+    .period
+    {
+        line-height:26px;
+        color:gray;
+        width:100%;
+        display:flex; justify-content:center; align-items:center;
+    }
+    
+    .areaicon
+    {
+        width:70%;
+        max-width:100px;
+    }
 
-			.tooltip .tooltiptext::after {
-				content: "";
-				position: absolute;
-				top: 100%;
-				left: 50%;
-				margin-left: -5px;
-				border-width: 5px;
-				border-style: solid;
-				border-color: #555 transparent transparent transparent;
-			}
+    .areaicon2
+    {
+        width:100%;
+        min-width:30px;
+        max-width:40px;
+    }
 
-			.tooltip:hover .tooltiptext {
-				visibility: visible;
-				opacity: 1;
-			}
-		</style>
-	</head>
+    @media only screen and (orientation: portrait)
+    {
+        .flex-direction
+        {
+            flex-direction:column;
+        }
+        .flex-direction-inv
+        {
+            flex-direction:row;
+        }
+        
+        #csection
+        {
+        /*
+            top:3%;
+            height:78%;*/
+            height:90%;
+        }
+        
+        #sep1, #sep2
+        {
+            /*display: none;*/
+            padding:0px;
+            height:20px;
+            width:100%;
+            border:0px; 
+            background:red;
+            background:transparent;
+        }
+        #sep1
+        {
+            background:#eeeeee;
+            border-bottom:1px solid #f1f1f1;
+            border-bottom:2px dotted #A1A1A1;
+        }
+              
+        #pic
+        {
+            padding-top:7%;
+        }
+        
+        #pic img
+        {
+            width:15%;
+            min-width:50px;
+        }
 
-	<body> <!--style="background:url('images/df2017.png'); background-repeat:no-repeat; background-size:cover;"-->
-		<div id="container" style="background:#f1f1f1">
-			<!--<div style="border:0px solid black; width:90px; position:absolute; z-index:1;"><img style="width:100%" src="images/agent-message.gif"></div>-->
-			<!--<div style="border:0px solid black; width:35%;top:9%; left:32.5%; position:absolute; z-index:0;"><img style="width:100%;" src="images/homepage.png"></div>-->
+        #text
+        {
+            background:transparent;
+            color:black;
+            height:130%;
+        }
 
-			<div style="background:transparent; width:100%; top:0px; margin-left:0%; height:64px; position:absolute; z-index:3; box-shadow: 0px 2px 8px #d5d5d5; -webkit-box-shadow: 0px 2px 8px #d5d5d5;">
-				<span style="display: table; margin: 0 auto; background:white; height:44px; width:100%; font-family:Roboto; font-size:21px; padding-top:20px; color:#676767">
-					<span style="color:#d9272d; margin-left:30px;">Fabio</span>&nbsp;<span style=" color:#676767;">Arceri</span><img style=" vertical-align:top; height:100%; margin-left:37px; margin-top:-4px" src="images/pipe.png"></img>
-					<span style="font-family:sans-serif; font-size:10px; letter-spacing:3px; font-variant: small-caps; margin-left:20px; position:absolute; margin-top:7px">About
-						<span class="tooltip" style="margin-left:30px;"><strong><a class="header" href="#">algorithms</a></strong><span class="tooltiptext">Work in progress...</span></span>
-						<span class="tooltip" style="margin-left:30px;"><strong><a class="header" href="#">programming</a></strong><span class="tooltiptext">Work in progress...</span></span>
-						<span class="tooltip" style="margin-left:30px;"><strong><a class="header" href="#">technical_writing</a></strong><span class="tooltiptext">Work in progress...</span></span>
-						<span class="tooltip" style="margin-left:30px;"><strong><a class="header" href="#">teaching</a></strong><span class="tooltiptext">Work in progress...</span></span>
-						<span class="tooltip" style="margin-left:30px;"><strong><a class="header" href="#">public_speaking</a></strong><span class="tooltiptext">Work in progress...</span></span>
-						<span class="tooltip" style="margin-left:30px;"><strong><a class="header" href="#">project_management</a></strong><span class="tooltiptext">Work in progress...</span></span>
-						<span class="tooltip" style="margin-left:30px;"><strong><a class="header" href="#">community_management</a></strong><span class="tooltiptext">Work in progress...</span></span>
+        #lowsection
+        {            
+            height:10%;            
+        }
 
-					</span>
-				</span>
-			</div>
-			<!--
-			<div style="background:transparent; width:100%; top:16px; margin-left:0%; position:absolute; text-align:center; z-index:0;">
-				<span style="display: table; margin: 0 auto; background:transparent; width:100%; padding:0px;">
-					<img style="width:100%; height:1px; padding:0px;" src="images/colline.png">
-				</span>
-			</div>-->
+        #lowsection span
+        {
+            /*padding-top:0px;*/
+        }
 
-			<div style="background:transparent; width:100%; top:160px; margin-left:0%; position:absolute; z-index:2">
-				<span style="display: table; margin: 0 auto; background:transparent; width:900px">
-					<img style="padding-left:490px; width:8%;" src="images/agent-message.gif">
-				</span>
-			</div>
+        a.footer img.footer
+        {
+            /*width:75%;*/
+        }
 
-			<div style="background:transparent; width:100%; top:116px; margin-left:0%; position:absolute; text-align:center;">
-				<span style="display: table; margin: 0 auto; background:transparent; width:900px">
-					<img style="width:50%; border-radius: 20px 20px; box-shadow: 0px 12px 18px #d5d5d5; -webkit-box-shadow: 0px 12px 18px #d5d5d5;" src="images/homepage3.png">
-				</span>
-			</div>
+        #slidots
+        {
+            /* top:47%; */
+        }
+        
+        #slidearrows a
+        {
+            margin-top:-10%;
+        }
 
-			<div style="background:transparent; width:100%; bottom:76px; margin-left:0%; position:absolute; text-align:center; z-index:0;">
-				<span style="display: table; margin: 0 auto; background:transparent; width:100%; padding:0px;">
-					<img style="width:100%; height:4px; padding-bottom:0px;" src="images/colline.png">
-				</span>
-			</div>
+        .prev
+        {
+            margin-left:0px;
+        }
+        .next
+        {
+            margin-right:1px;
+        }
+        .areaicon
+        {
+            width:80%;
+            min-width:30px;
+        }        
+    }
+    
+    
+    </style>
+    
+    <link rel="stylesheet" href="css/slider.css">
 
-			<div style="background: black; width:100%; bottom:0%; margin-left:0%; height:80px; position:absolute; ">
-				<span class="footer" style="display: table; margin: 0 auto; background:transparent; padding-top:9px; padding-left:6px; height:100%; text-align:center">
-					<a class="footer" target="_self"  href="#" data-icon-text="fabio.arceri@gmail.com"><img class="footer" src="images/bw-email.png" alt=""><img class="footer" src="images/email.png" alt=""></a>
-					<a class="footer" target="_blank" href="https://goo.gl/BO8qpI" data-icon-text="Curriculum Vitae"><img class="footer" src="images/bw-cv.png" alt=""><img class="footer" src="images/cv.png" alt=""></a>
-					<a class="footer" target="_blank" href="https://www.linkedin.com/in/fabioarceri" data-icon-text="LinkedIn"><img class="footer" src="images/bw-linkedin.png" alt=""><img class="footer" src="images/linkedin.png" alt=""></a>
-					<a class="footer" target="_blank" href="https://fabioarceri.blogspot.it/" data-icon-text="Blogger"><img class="footer" src="images/bw-blogger.png" alt=""><img class="footer" src="images/blogger.png" alt=""></a>
-					<a class="footer" target="_blank" href="https://plus.google.com/u/0/+FabioArceri" data-icon-text="Google+"><img class="footer" src="images/bw-googleplus.png" alt=""><img class="footer" src="images/googleplus.png" alt=""></a>
-					<a class="footer" target="_blank" href="https://www.facebook.com/nicolofabio.arceri" data-icon-text="Facebook"><img class="footer" src="images/bw-facebook.png" alt=""><img class="footer" src="images/facebook.png" alt=""></a>
-					<a class="footer" target="_blank" href="https://twitter.com/fnarceri" data-icon-text="Twitter"><img class="footer" src="images/bw-twitter.png" alt=""><img class="footer" src="images/twitter.png" alt=""></a>
-					<a class="footer" target="_blank" href="https://www.xmind.net/share/fabio.arceri" data-icon-text="XMind"><img class="footer" src="images/bw-xmind.png" alt=""><img class="footer" src="images/xmind.png" alt=""></a>
-					<a class="footer" target="_self"  href="#" data-icon-text="Github (Work in progress...)"><img class="footer" src="images/bw-github2.png" alt=""><img class="footer" src="images/github2.png" alt=""></a>
-					<a class="footer" target="_blank" href="https://www.slideshare.net/nicolofabioarceri" data-icon-text="Slideshare"><img class="footer" src="images/bw-ssharelogo.png" alt=""><img class="footer" src="images/ssharelogo.png" alt=""></a>
-					<a class="footer" target="_blank" href="https://medium.com/@fabio.arceri" data-icon-text="Medium"><img class="footer" src="images/bw-medium.png" alt=""><img class="footer" src="images/medium.png" alt=""></a>
-				</span>
-			</div>
-		</div>
-	</body>
+    <style>
+       
+    p.relw
+    {
+        background:#EEEEEE; padding:12px;
+        -webkit-border-radius: 6px; -moz-border-radius: 6px;
+        /*box-shadow: 0px 2px 8px #d5d5d5; -webkit-box-shadow: 0px 2px 8px #d5d5d5;*/
+/*        font-size:11px;*/
+    }
+    
+    div.skill-pic
+    {
+        width:100%;
+        -webkit-border-radius: 6px; -moz-border-radius: 6px;
+        box-shadow: 0px 2px 8px #d5d5d5; -webkit-box-shadow: 0px 2px 8px #d5d5d5;
+    }
+
+    div.skill-pic img
+    {
+        width:100%;
+        -webkit-border-radius: 6px; -moz-border-radius: 6px;
+    }
+
+    </style>
+    </head>
+
+    <body style="">
+        <div id="container" style="">
+
+            <!------------------------------ CONTENT SECTION ------------------------------>
+            <div id="csection" style="top:0px;" class="flex-direction">
+
+                <!------------------------------ PIC&BIO SECTION ------------------------------>
+                <div id="pic" style="flex-direction:column;" class="flex-direction">
+                    <img src="images/fabiolinkedin.png">
+                    <div>
+                        <span style="line-height:22px;">
+                            <a class="link" href="index.htm"><span style="font-size:20px;line-height:50px;"><strong>Fabio Arceri</strong></span></a><br>
+                            MASTER's DEGREE in <strong>COMPUTER SCIENCE</strong> at University of Catania<br>
+                            GOOGLE <strong>COMMUNITY MANAGER</strong> at&nbsp;&nbsp;&nbsp;<a target="_blank" href="https://developers.google.com/community/gdg"><img style="vertical-align:middle; width:58px; padding-top:4px;" src="images/gdg.png"></a><!--<a style="" href="">❰❱ GDG</a>--></span><br>
+                            <br>
+                            In <span style="color:red">♥</span> with algorithms<span style="color:red">,</span> technical writing<span style="color:red">,</span> public speaking<span style="color:red">,</span> communities<span style="color:red">,</span> running<span style="color:red">,</span> joking<span style="color:red">,</span> pizza<span style="color:red">,</span> playing music<span style="color:red">,</span> retro-gaming<span style="color:red">,</span> and <a class="link" target="_blank" href="https://federicascarso.blogspot.com/"><strong>Federica</strong></a>.
+                    </div>                   
+                </div>
+
+                <!------------------------------ SEPARATORS ------------------------------>
+                <div id="sep1"></div>
+                <div id="sep2"></div>
+                
+                <!------------------------------ SLIDER DOTS ------------------------------>
+               <div id="slidots">
+                  <a href="#top"><span class="dot" onclick="currentSlide(1)"></span></a>
+                  <a href="#top"><span class="dot" onclick="currentSlide(2)"></span></a>
+                  <a href="#top"><span class="dot" onclick="currentSlide(3)"></span></a>
+                  <a href="#top"><span class="dot" onclick="currentSlide(4)"></span></a> 
+                  <a href="#top"><span class="dot" onclick="currentSlide(5)"></span></a> 
+                  <a href="#top"><span class="dot" onclick="currentSlide(6)"></span></a> 
+                </div>
+                
+                <!------------------------------ SLIDER ARROWS ------------------------------>
+               <div id="slidearrows" style="">
+                    <a href="#top" style="text-decoration:none;" class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a href="#top" style="text-decoration:none;" class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>                               
+                
+                <!------------------------------ SLIDES' SECTION ------------------------------>
+                <div id="text">
+                    <div style="background:transparent; width:90%;">                                        
+                        <div class="slideshow-container" style="padding-left:5%; padding-right:5%;">
+                            <a name="top"></a>
+                            <!-- ***********************************************************************
+                                                        SLIDE 1: HOME                                
+                                 *********************************************************************** -->
+                            <div class="mySlides fade">
+                              	<span style="font-size:200%; line-height:50px; ">Hey you :-)</span><br>
+                              	<span style="line-height:150%; font-size:100%">My name is Fabio, I'm italian and I live in Catania. Although my specialties are basically about <a class="link" href="#top" onclick="currentSlide(2)"><strong>computer science</strong></a>, I'm also pretty fine at <a class="link" href="#top" onclick="currentSlide(5)"><strong>writing</strong></a>, <a class="link" href="#top" onclick="currentSlide(4)"><strong>teaching</strong></a>, creating optimized <a class="link" href="#top" onclick="currentSlide(3)"><strong>worflows</strong></a>, and managing <a class="link" href="#top" onclick="currentSlide(3)"><strong>workgroups</strong></a>. This space is meant to present <span style="color:#dd55ffff"><strong>what I may do for you</strong></span>, either as an individual or even as a company. So, let's get started with my skills' tour from the index below, if you so wished 😉</span><br><br>
+                              	<table style="width:100%; text-align:center;">
+                              	    <tr>
+                              	        <td style="width:20%;"><a href="#top" onclick="currentSlide(2)"><img class="areaicon" src="images/area_cons.png"></a></td>
+                              	        <td style="width:20%;"></td>
+                              	        <td style="width:20%;"></td>
+                              	        <td style="width:20%;"></td>
+                              	        <td style="width:20%;"><a href="#top" onclick="currentSlide(3)"><img class="areaicon" src="images/area_org.png"></a></td>
+                              	    </tr>
+                              	    <tr style="">
+                              	        <td></td>
+                              	        <td><img style="width:30%; transform: rotate(30deg);" src="images/green_arr.png"></td>
+                              	        <td></td>
+                              	        <td><img style="width:30%; transform: rotate(150deg);" src="images/blue_arr.png"></td>
+                              	        <td></td>
+                              	    </tr>
+                              	    <tr style="">
+                              	        <td></td>
+                              	        <td></td>
+                              	        <td><a href="#top" onclick="currentSlide(6)"><img class="areaicon" src="images/exp.png"></a></td>
+                              	        <td></td>
+                              	        <td></td>
+                              	    </tr>
+                              	    <tr style="">
+                              	        <td></td>
+                              	        <td><img style="width:30%; transform: rotate(330deg);" src="images/yellow_arr.png"></a></td>
+                              	        <td></td>
+                              	        <td><img style="width:30%; transform: rotate(210deg);" src="images/red_arr.png"></a></td>
+                              	        <td></td>
+                              	    </tr>
+                              	    <tr style="">
+                              	        <td><a href="#top" onclick="currentSlide(4)"><img class="areaicon" src="images/area_edu.png"></a></td>
+                              	        <td></td>
+                              	        <td></td>
+                              	        <td></td>
+                              	        <td><a href="#top" onclick="currentSlide(5)"><img class="areaicon" src="images/area_cont.png"></a></td>
+                              	    </tr>
+                              	</table>
+                            </div>
+                            <!-- ***********************************************************************
+                                                        SLIDE 2                                
+                                 *********************************************************************** -->
+                            <div class="mySlides fade">
+                                <div style="width:100%; text-align:center;">
+                              	    <img class="areaicon" src="images/area_cons.png">
+                              	</div>
+                              	<br>
+                              	<hr style="border-top:1px solid lightgray">                              	
+                              	<p class="skill-desc"><span style="color:#00aa00"><strong>FUNCTIONAL ANALYSIS</strong></span><br>Aww...  Functional Analysis, the software developer's joys 🤗 and sorrows 😩. I've seen too many times people not spending enough time in studying the domain's problem in order to gain a good and deep understanding of the problem. Even me too I fell in the same trap along my learning and professional path, a lot of times. What I have learnt from this is that the time I spend understanding a problem is never too much whenever I realize I haven't fully understood it yet. The risk is, at the end of the fair, that the solution you designed it's not going to solve the problem, partly or at all.</p>
+                              	<div class="skill-pic">
+                                  	<img src="images/func_an.jpeg">
+                                </div>
+                              	<p class="relw"><strong>Some nice related works:</strong> <a class="link" href="#job-bob" onclick="currentSlide(6)">Beonbuy</a> • <a class="link" href="#job-yh" onclick="currentSlide(6)">Job matchmaking platform</a> • <a class="link" href="#job-bmf" onclick="currentSlide(6)">BMF-based MLM accounting system</a></p>
+
+                              	<hr style="border-top:1px solid lightgray">                              	
+                              	<p class="skill-desc"><span style="color:#00aa00"><strong>ALGORITHM & DATA STRUCTURE DESIGN</strong></span><br>Functional Analysis is nice, because it makes me walk in gradually into both the problem domain and the problem itself. Anyway, since I am a programmer after all, the real satisfying challenge for me it's studying a problem in order to find an algorithm, a data structure, or both of them, that can solve the problem in an elegant manner. Sometimes you can't or won't be elegant, so that's where the patch solutions (aka not-so-elegant solutions) come in. I dislike patches, a lot. But, in the real world, you need them more often than you think (or can stand 😜).</p>
+                              	<div class="skill-pic">
+                                  	<img src="images/alg&ds.jpg">
+                                </div>
+                              	<p class="relw"><strong>Some nice related works:</strong> <a class="link" href="#job-bob" onclick="currentSlide(6)">Beonbuy</a> • <a class="link" href="#job-grypto" onclick="currentSlide(6)">Grypto</a> • <a class="link" href="#job-bmf" onclick="currentSlide(6)">BMF-based MLM accounting system</a></p>                              	
+                              	                              
+                              	<hr style="border-top:1px solid lightgray">                              	
+                              	<p class="skill-desc"><span style="color:#00aa00"><strong>SOFTWARE ARCHITECTURE & CODING</strong></span><br>I like so much solving problem by Algorithms & Co., but I literally love code organization, it makes me feel like the whole system were already ready to run, although it's still living just on my paper sheets. It just removes the pain from coding while keeping the fun. Simply wonderful. Oh, and don't trust people who says you don't need to be able to code in order to be a code architect. They are guilty liars.</p>
+                              	<div class="skill-pic">
+                                  	<img src="images/soft_arch_code.jpeg">
+                                </div>
+                              	<p class="relw"><strong>Some nice related works:</strong> <a class="link" href="#job-bob" onclick="currentSlide(6)">Beonbuy</a> • <a class="link" href="#job-grypto" onclick="currentSlide(6)">Grypto</a> • <a class="link" href="#job-bmf" onclick="currentSlide(6)">BMF-based MLM accounting system</a></p>
+                            </div>                                                            
+                            <!-- ***********************************************************************
+                                                        SLIDE 3                               
+                                 *********************************************************************** -->
+                            <div class="mySlides fade">
+                                <div style="width:100%; text-align:center;">
+                              	    <img class="areaicon" src="images/area_org.png">
+                              	</div>
+                              	<br>
+                              	<hr style="border-top:1px solid lightgray">
+
+                              	<p class="skill-desc"><span style="color:#0066ff"><strong>COMMUNITY MANAGEMENT</strong></span><br>Okay, you found me out, I confess: I am a <strong>Good Damn Guy</strong>... 😅 Joke license. I've been into community management since 2014, since I first approached the world of <strong>Google Developer Groups</strong>. From that moment my life changed entirely (for the better), and today I do all my best so that the same happens to others too.</p>
+                              	<div class="skill-pic">
+                                  	<img src="images/comm_manag.jpg">
+                                </div>
+                              	<p class="relw"><strong>Some nice related works:</strong> <a class="link" href="#job-gdg" onclick="currentSlide(6)">GDG Catania management</a></p>
+
+                              	<p class="skill-desc"><span style="color:#0066ff"><strong>WORKGROUP MANAGEMENT</strong></span><br>Community management is great if you want to train yourself in workgroup management, although of course that's not the only way. For instance, leading a startup company group can be very effective in this respect, whereas organizing a conference 👇 is of course far more so.</p>
+                              	<div class="skill-pic">
+                                  	<img src="images/wg_man.jpg">
+                                </div>
+                              	<p class="relw"><strong>Some nice related works:</strong> <a class="link" href="#job-bob" onclick="currentSlide(6)">Beonbuy</a> • <a class="link" href="#job-gdg" onclick="currentSlide(6)">GDG Catania activities and events</a> • <a class="link" href="#job-gyn" onclick="currentSlide(6)">Gynesia (a startup company project)</a></p>
+                              	
+                              	<p class="skill-desc"><span style="color:#0066ff"><strong>CONFERENCE ORGANIZATION</strong></span><br>Sometimes I deal with developer conferences organization, with technical speeches, workshops, hackathons, and so on. It's a big deal guys, trust me. But I definitely love that 😍.</p>
+                              	<div class="skill-pic">
+                                  	<img src="images/conf_org2.jpg">
+                                </div>
+                              	<p class="relw"><strong>Some nice related works:</strong> <a class="link" href="#job-gdg" onclick="currentSlide(6)">GDG DevFest Catania 2018</a> • <a class="link" href="#job-gdg" onclick="currentSlide(6)">GDG DevFest Mediterranean ed.s 2017, 2016, 2015</a> • <a class="link" href="#job-gdg" onclick="currentSlide(6)">Google I/O Extended Catania ed.s 2017, 2016, 2015</a></p>
+
+                            </div>                                                            
+                            <!-- ***********************************************************************
+                                                        SLIDE 4                                
+                                 *********************************************************************** -->
+                            <div class="mySlides fade">
+                                <div style="width:100%; text-align:center;">
+                              	    <img class="areaicon" src="images/area_edu.png">
+                              	</div>
+                              	<br>
+                              	<hr style="border-top:1px solid lightgray">
+                              	<p class="skill-desc"><span style="color:#ffcc00"><strong>PRIVATE LESSONS</strong></span><br>I give private lessons about programming basics and software design for the most, both in italian (that is my first language) and english (but you have to forgive me 😅).</p>
+                              	<p class="skill-desc"><span style="color:#ffcc00"><strong>SPEECHES • WORKSHOPS</strong></span><br>Apparently, I'm supposed to be a public speaker. Interested in a contribution of mine? Let's talk about 😉.</p>
+                              	<div class="skill-pic">
+                                  	<img src="images/barcamp.jpg">
+                                </div>
+                              	<p class="relw"><strong>Some nice related works:</strong> <a class="link" href="#job-gdg" onclick="currentSlide(6)">Speech "Software-defined Networks: un nuovo approccio alle architetture di rete" @ Google I/O Extended 2019</a> • <a class="link" href="#job-cpit1" onclick="currentSlide(6)">Barcamp "Il Continuous Engagement nella gestione delle community off-line @ Campus Party Italia 2017"</a></p>
+                              	
+                              	<p class="skill-desc"><span style="color:#ffcc00"><strong>COURSES • CLASSES</strong></span><br>Off and on I get involved in making some lessons in some courses. So, if you wish to have me involved in your courses, please reach me out through Telegram and simply tell me about your needs. Mine are a whiteboard, an erasable marker, and a wig. That's all, looking forward to you 🤗. And bring to me the wig, please. For real 😐.</p>
+                              	<div class="skill-pic">
+                                  	<img src="images/course.jpg">
+                                </div>
+                              	<p class="relw"><strong>Some nice related works:</strong> <a class="link" href="#job-ytia" onclick="currentSlide(6)">Basics of Internet of Things, ed. 2018 (powered by Young Talent in Action)</a> • <a class="link" href="#job-ytia" onclick="currentSlide(6)">Basics of coding, ed. 2017 (powered by Young Talent in Action)</a> • <a class="link" href="#job-cs4hs" onclick="currentSlide(6)">Computer Science for High School, ed. 2015-2016 (powered by Google for Education)</a></p>
+                              	
+                              	<p class="skill-desc"><span style="color:#ffcc00"><strong>MENTORSHIPS</strong></span><br>Same as abooove 🤗 (wig included 😠).</p>
+                              	<div class="skill-pic">
+                                  	<img src="images/mentorship.jpg">
+                                </div>
+                              	<p class="relw"><strong>Some nice related works:</strong> <a class="link" href="#job-swct" onclick="currentSlide(6)">Startup Weekend Catania ed.s 2017, 2016</a></p>                              	
+                              	
+                            </div>                                                            
+                            <!-- ***********************************************************************
+                                                        SLIDE 5                                
+                                 *********************************************************************** -->
+                            <div class="mySlides fade">
+                                <div style="width:100%; text-align:center;">
+                              	    <img class="areaicon" src="images/area_cont.png">
+                              	</div>
+                              	<br>
+                              	<hr style="border-top:1px solid lightgray">
+                              	<p class="skill-desc"><div style="color:#ff0000;"><strong>BLOGPOSTS • ARTICLES</strong></div><br>I love writing, really. It's just all I can say. Whether it's an article, a handout, a presentation, a handbook, a book, it doesn't really matter. I love writing, a lot. So, do not hesitate to write to me if you wish me to...  write for you 😜.</p>
+                              	<p class="relw"><strong>Some nice related works:</strong> <a class="link" href="#job-blog" onclick="currentSlide(6)">My blog</a></p>
+                              	
+                              	<p class="skill-desc"><span style="color:#ff0000"><strong>SLIDE PRESENTATIONS</strong></span><br>Same as above.</p>                              	
+                              	<p class="relw"><strong>Some nice related works:</strong> <a class="link" href="#job-gdg" onclick="currentSlide(6)">GDG Catania management</a> • <a class="link" href="#job-gdg" onclick="currentSlide(6)">Speech "Software-defined Networks: un nuovo approccio alle architetture di rete" @ Google I/O Extended 2019</a> • <a class="link" href="#job-ytia" onclick="currentSlide(6)">Basics of Internet of Things, ed. 2018 (powered by Young Talent in Action)</a> • <a class="link" href="#job-cs4hs" onclick="currentSlide(6)">Computer Science for High School, ed. 2015-2016 (powered by Google for Education)</a> • <a class="link" href="#job-gyn" onclick="currentSlide(6)">Gynesia (a startup company project)</a></p>
+                              	
+                              	<p class="skill-desc"><span style="color:#ff0000"><strong>TECHNICAL REPORTS • HANDBOOKS</strong></span><br>Same as above.</p>
+                              	<p class="relw"><strong>Some nice related works:</strong> <a class="link" href="#job-bob" onclick="currentSlide(6)">Beonbuy</a> • <a class="link" href="#job-yh" onclick="currentSlide(6)">Job matchmaking platform</a> • <a class="link" href="#job-bmf" onclick="currentSlide(6)">BMF-based MLM accounting system</a> • <a class="link" href="#job-ubuntu" onclick="currentSlide(6)">Handbook "Ubuntu 10.10 “Maverik Meerkat”: mini-guida"</a> • <a class="link" href="#job-phy" onclick="currentSlide(6)">Handbook "Appunti di Fisica 1"</a> • <a class="link" href="#job-laurea" onclick="currentSlide(6)">Thesis "SOFTWARE-DEFINED NETWORKING (SDN): UN NUOVO APPROCCIO ALLE ARCHITETTURE DI RETE"</a></p>
+
+                            </div>                                                            
+
+                            <!-- ***********************************************************************
+                                                        SLIDE 6: EXPERIENCES
+                                 *********************************************************************** -->
+
+                            <div class="mySlides fade">
+                                <div style="width:100%; text-align:center;"><img class="areaicon" src="images/exp.png"></div>
+                              	<br>
+
+                              	<!-- Blocco principale -->
+                              	<hr style="border-top:1px solid lightgray">
+                               	<a name="job-blog"></a>
+                                <div class="main-block-exp">
+                                  	<!-- Blocco di testa -->
+                                    <div class="head-block-exp">
+                                      	<!-- Subject -->
+                                        <div class="subject">My personal blog<br><span style="font-size:12px">Chronicles of an emotional ♥ logipithecus.</span></div>
+                                      	<!-- Cliente e periodo -->
+                                       	<span class="client">Catania, personal project</span>
+                                       	<span class="period">2020 –&nbsp;<span style="color:red">now</span></span>
+                                       	<div class="skills-summary"">
+                                       	    <table>
+                                       	        <tr>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(2)"><img class="areaicon2" src="images/area_cons2_col.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(3)"><img class="areaicon2" src="images/area_org2_bw.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(4)"><img class="areaicon2" src="images/area_edu2_col.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(5)"><img class="areaicon2" src="images/area_cont2_col.png"></a>
+                                       	            </td>
+                                       	        </tr>                                       	    
+                                       	    </table>
+                                       	</div>
+                                    </div>
+                                    <p>I always liked the idea of having a space where to share my thoughts and talking about what I like and do in my life, although I never had enough time to do it. In 2020 I decided to set aside the time in order to commit myself to run it properly, so... here it is :-)</p>
+                                  	<!-- Skills -->
+                                    <div class="skills-block-exp">
+                                      	<table>
+                                      	    <tr>
+                                      	        <td><a class="link" href="#" onclick="currentSlide(2)"><img class="areaicon2" src="images/area_cons2_col.png"></a></td>
+                                      	        <td>I basically talk about computer science technologies, theories, and methodologies, but I also like to report and comment facts, events, opportunities, curiosities and any other interesting news from the IT world.</td>
+                                      	    </tr>
+                                      	    <tr>
+                                      	        <td><a class="link" href="#" onclick="currentSlide(4)"><img class="areaicon2" src="images/area_edu2_col.png"></a></td>
+                                      	        <td>Sometimes I draw up courses as a series of articles, sometimes I deal with a topic within just a single article. It depends :-)</td>
+                                      	    </tr>
+                                      	    <tr>
+                                      	        <td><a class="link" href="#" onclick="currentSlide(5)"><img class="areaicon2" src="images/area_cont2_col.png"></a></td>
+                                      	        <td><a class="link" href="https://fabioarceri.blogspot.com" target="_blank">Blog articles</a>.</td>
+                                      	    </tr>
+                                      	</table>
+                                    </div>
+                                </div>
+
+
+                              	<!-- Blocco principale -->
+                              	<hr style="border-top:1px solid lightgray">
+                               	<a name="job-bob"></a>
+                                <div class="main-block-exp">
+                                  	<!-- Blocco di testa -->
+                                    <div class="head-block-exp">
+                                      	<!-- Subject -->
+                                        <div class="subject">Project "Beonbuy"<br><span style="font-size:12px">Find the shop closest to you which is selling what you are searching for</span></div>
+                                      	<!-- Cliente e periodo -->
+                                       	<span class="client">Catania, Beonbuy srls</span>
+                                       	<span class="period">2018 –&nbsp;<span style="color:red">now</span></span>
+                                       	<div class="skills-summary"">
+                                       	    <table>
+                                       	        <tr>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(2)"><img class="areaicon2" src="images/area_cons2_col.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(3)"><img class="areaicon2" src="images/area_org2_col.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(4)"><img class="areaicon2" src="images/area_edu2_col.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(5)"><img class="areaicon2" src="images/area_cont2_col.png"></a>
+                                       	            </td>
+                                       	        </tr>                                       	    
+                                       	    </table>
+                                       	</div>
+                                   	</div>
+                                    <p><a class="link" href="https://www.beonbuy.com/" target="_blank">Beonbuy</a> is the project (the company) I'm currently working on (for). It is a sort of search engine that is intended to let you know where are located the closest shops to you selling a product of your interest. Beonbuy it's a distributed system made up of a mobile app, a web application, and a desktop syncing tool, that is able to potentially interoperate with any shop's management system in order to give always-updated information about stocks, prices, etc... Beonbuy is for helping you to reconnect to your local sellers and letting the local economy free to grow. Is Beonbuy the anti-Amazon? Maybe, or maybe not 😉.</p>
+                                  	<!-- Skills -->
+                                    <div class="skills-block-exp">
+                                      	<table>
+                                      	    <tr>
+                                      	        <td><a class="link" href="#" onclick="currentSlide(2)"><img class="areaicon2" src="images/area_cons2_col.png"></a></td>
+                                      	        <td>As the <strong>Chief Information Technology Officer</strong> I designed the whole system logics and decided the technologies to be used. I am also in charge of the feasibility studies and give support on a daily basis to the programmers by reviewing their code and dealing together with the threats that come along.</td>
+                                      	    </tr>
+                                      	    <tr>
+                                      	        <td><a class="link" href="#" onclick="currentSlide(3)"><img class="areaicon2" src="images/area_org2_col.png"></a></td>
+                                      	        <td>As the <strong>Operations Manager</strong> I organize and supervise the tasks, and periodically plan out middle- and long-term roadmaps.</td>
+                                      	    </tr>
+                                      	    <tr>
+                                      	        <td><a class="link" href="#" onclick="currentSlide(4)"><img class="areaicon2" src="images/area_edu2_col.png"></a></td>
+                                      	        <td>I held some internal lectures about OOP and other important coding-related issues.</td>
+                                      	    </tr>
+                                      	    <tr>
+                                      	        <td><a class="link" href="#" onclick="currentSlide(5)"><img class="areaicon2" src="images/area_cont2_col.png"></a></td>
+                                      	        <td>So many analysis docs, reports, algorithms, diagrams, and so on guys 😜.</td>
+                                      	</table>
+                                    </div>
+                                </div>
+
+
+                              	<!-- Blocco principale -->
+                              	<hr style="border-top:1px solid lightgray">
+                               	<a name="job-gdg"></a>
+                                <div class="main-block-exp">
+                                  	<!-- Blocco di testa -->
+                                    <div class="head-block-exp">
+                                      	<!-- Subject -->
+                                        <div class="subject">GDG Catania management<br><span style="font-size:12px">GDG DevFests • Google I/O Extendeds • Other meetups, courses, conferences, ecc...</span></div>
+                                      	<!-- Cliente e periodo -->
+                                       	<span class="client">Catania, Google Developer Community Programs</span>
+                                       	<span class="period">2014 –&nbsp;<span style="color:red">now</span></span>
+                                       	<div class="skills-summary"">
+                                       	    <table>
+                                       	        <tr>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(2)"><img class="areaicon2" src="images/area_cons2_col.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(3)"><img class="areaicon2" src="images/area_org2_col.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(4)"><img class="areaicon2" src="images/area_edu2_col.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(5)"><img class="areaicon2" src="images/area_cont2_col.png"></a>
+                                       	            </td>
+                                       	        </tr>                                       	    
+                                       	    </table>
+                                       	</div>
+                                    </div>
+                                    <p>When you join a Google Developer Group, you'll have the opportunity to meet local developers with similar interests in technology. A GDG meetup event includes talks on a wide range of technical topics where you can learn new skills through hands-on workshops. The community prides itself on being an inclusive environment where everyone and anyone interested in tech - from beginner developers to experienced professionals - all are welcome to join.</p>
+                                  	<!-- Skills -->
+                                    <div class="skills-block-exp">
+                                      	<table>
+                                      	    <tr>
+                                      	        <td><a class="link" href="#" onclick="currentSlide(2)"><img class="areaicon2" src="images/area_cons2_col.png"></a></td>
+                                      	        <td>I wrote some code in order to accomplish various engagement, communication, and management tasks.</td>
+                                      	    </tr>
+                                      	    <tr>
+                                      	        <td><a class="link" href="#" onclick="currentSlide(3)"><img class="areaicon2" src="images/area_org2_col.png"></a></td>
+                                      	        <td>As the lead community manager for Catania's chapter, I usually deal with workgroups supervision and direct organization of <a class="link" href="https://www.meetup.com/it-IT/GDG-Catania/events/past/" target="_blank">events and activities</a> like <a class="link" href="https://www.dailymotion.com/video/x69uyty" target="_blank">GDG DevFest Mediterranean 2017</a> and <a class="link" href="https://www.youtube.com/watch?v=FdeHaPtncIE" target="_blank">Google I/O Extended 2017 Catania</a>.</td>
+                                      	    </tr>
+                                      	    <tr>
+                                      	        <td><a class="link" href="#" onclick="currentSlide(4)"><img class="areaicon2" src="images/area_edu2_col.png"></a></td>
+                                      	        <td>Since I'm basically fully committed with the organizational aspects, I unfortunately had very few opportunities to give some technical contributions. One of that was a speech about software-defined networks (SDN) and <a class="link" href="#job-cs4hs">a course about computer science and engineering</a>.</td>
+                                      	    </tr>
+                                      	    <tr>
+                                      	        <td><a class="link" href="#" onclick="currentSlide(5)"><img class="areaicon2" src="images/area_cont2_col.png"></a></td>
+                                      	        <td><a class="link" href="https://docs.google.com/presentation/d/1odu-l8Gdn2ThpkIhMIr0x5tteimcz68pcWSB7QeNkeY/edit?usp=sharing" target="_blank">Presentation on GDG</a> • <a class="link" href="https://docs.google.com/presentation/d/1jwcYWYyYbY2iOR5_OmOa6oRrf-d9rdVM6m8HKK7paKw/edit?usp=sharing" target="_blank">Presentation on SDN</a> • <a class="link" href="https://docs.google.com/presentation/d/1P6dQxvS7zRcaOijwEuMYGASibe58BXnBp39jvX57EVI/edit?usp=sharing" target="_blank">Presentation on community engagement</a></td>
+                                      	    </tr>
+                                      	</table>
+                                    </div>
+                                </div>                                
+
+
+                              	<!-- Blocco principale -->
+                              	<hr style="border-top:1px solid lightgray">
+                               	<a name="job-laurea"></a>
+                                <div class="main-block-exp">
+                                  	<!-- Blocco di testa -->
+                                    <div class="head-block-exp">
+                                      	<!-- Subject -->
+                                        <div class="subject">Thesis "SOFTWARE-DEFINED NETWORKING (SDN): UN NUOVO APPROCCIO ALLE ARCHITETTURE DI RETE"<br><span style="font-size:12px"></span></div>
+                                      	<!-- Cliente e periodo -->
+                                       	<span class="client">Catania, personal project</span>
+                                       	<span class="period">2018</span>
+                                       	<div class="skills-summary"">
+                                       	    <table>
+                                       	        <tr>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(2)"><img class="areaicon2" src="images/area_cons2_bw.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(3)"><img class="areaicon2" src="images/area_org2_bw.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(4)"><img class="areaicon2" src="images/area_edu2_bw.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(5)"><img class="areaicon2" src="images/area_cont2_col.png"></a>
+                                       	            </td>
+                                       	        </tr>                                       	    
+                                       	    </table>
+                                       	</div>
+                                    </div>
+                                    <p>This is the thesis I wrote for my computer science graduation exam.</p>
+                                  	<!-- Skills -->
+                                    <div class="skills-block-exp">
+                                      	<table>
+                                      	    <tr>
+                                      	        <td><a class="link" href="#" onclick="currentSlide(5)"><img class="areaicon2" src="images/area_cont2_col.png"></a></td>
+                                      	        <td><a class="link" href="https://docs.google.com/document/d/1L0ONnRkiaoC5IQ1tmev3STkHwjaUw1FpIVBXQ5xHft8/edit?usp=sharing" target="_blank">Paper</a> • <a class="link" href="https://docs.google.com/presentation/d/1jwcYWYyYbY2iOR5_OmOa6oRrf-d9rdVM6m8HKK7paKw/edit?usp=sharing" target="_blank">Presentation</a></td>
+                                      	    </tr>
+                                      	</table>
+                                    </div>
+                                </div>                                        
+
+                               
+                              	<!-- Blocco principale -->
+                              	<hr style="border-top:1px solid lightgray">
+                               	<a name="job-ytia"></a>
+                                <div class="main-block-exp">
+                                  	<!-- Blocco di testa -->
+                                    <div class="head-block-exp">
+                                      	<!-- Subject -->
+                                        <div class="subject">Lectures for the course series "Young Talent in Action"</div>
+                                      	<!-- Cliente e periodo -->
+                                       	<span class="client">Catania, Tree srl & ManpowerGroup Italia</span>
+                                       	<span class="period">2017 – 2018</span>
+                                       	<div class="skills-summary"">
+                                       	    <table>
+                                       	        <tr>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(2)"><img class="areaicon2" src="images/area_cons2_bw.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(3)"><img class="areaicon2" src="images/area_org2_col.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(4)"><img class="areaicon2" src="images/area_edu2_col.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(5)"><img class="areaicon2" src="images/area_cont2_col.png"></a>
+                                       	            </td>
+                                       	        </tr>                                       	    
+                                       	    </table>
+                                       	</div>
+                                    </div>
+                                    <p>I work occasionally as an external IT teacher in private courses organized by Tree srl, a local company focused on open innovation, education, and communication.</p>
+                                  	<!-- Skills -->
+                                    <div class="skills-block-exp">
+                                      	<table>
+                                      	    <tr>
+                                      	        <td><a class="link" href="#" onclick="currentSlide(3)"><img class="areaicon2" src="images/area_org2_col.png"></a></td>
+                                      	        <td>I dealt with the typical aspects about a student class management plus the organization of a small end-of-course hackathon.</td>
+                                      	    </tr>
+                                      	    <tr>
+                                      	        <td><a class="link" href="#" onclick="currentSlide(4)"><img class="areaicon2" src="images/area_edu2_col.png"></a></td>
+                                      	        <td>Two courses held until now: "Basics of coding" and "Basics of Internet of Things"</td>
+                                      	    </tr>
+                                      	    <tr>                                      	    
+                                      	        <td><a class="link" href="#" onclick="currentSlide(5)"><img class="areaicon2" src="images/area_cont2_col.png"></a></td>
+                                      	        <td><a class="link" href="https://drive.google.com/file/d/1_HToRkY5amtLR4domO0cK42Z-uH0IU6c/view?usp=sharing" target="_blank">IoT lesson 1: "Casi d'uso dell'IoT"</a> • <a class="link" href="https://drive.google.com/file/d/1VxlzsnovcpCAyHeIniNmTgcL8CcRzOnS/view?usp=sharing" target="_blank">IoT lesson 2: "Dall'idea al prodotto passando per il prototipo"</a></td>
+                                      	    </tr>
+                                      	</table>
+                                    </div>
+                                </div>                                   
+                                
+                                       
+                              	<!-- Blocco principale -->
+                              	<hr style="border-top:1px solid lightgray">
+                               	<a name="job-cpit1"></a>
+                                <div class="main-block-exp">
+                                  	<!-- Blocco di testa -->
+                                    <div class="head-block-exp">
+                                      	<!-- Subject -->
+                                        <div class="subject">Barcamp "Il Continuous Engagement nella gestione delle community off-line"</div>
+                                      	<!-- Cliente e periodo -->
+                                       	<span class="client">Milan, Campus Party Italia 2017</span>
+                                       	<span class="period">2017</span>
+                                       	<div class="skills-summary"">
+                                       	    <table>
+                                       	        <tr>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(2)"><img class="areaicon2" src="images/area_cons2_bw.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(3)"><img class="areaicon2" src="images/area_org2_bw.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(4)"><img class="areaicon2" src="images/area_edu2_col.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(5)"><img class="areaicon2" src="images/area_cont2_col.png"></a>
+                                       	            </td>
+                                       	        </tr>                                       	    
+                                       	    </table>
+                                       	</div>
+                                    </div>
+                                    <p>In 2017 I got involved as a speaker for the event <a class="link" href="https://italia.campus-party.org/cpit1/" target="">Campus Party Italia, 1st edition</a></p>
+                                  	<!-- Skills -->
+                                    <div class="skills-block-exp">
+                                      	<table>
+                                      	    <tr>
+                                      	        <td><a class="link" href="#" onclick="currentSlide(4)"><img class="areaicon2" src="images/area_edu2_col.png"></a></td>
+                                      	        <td>I held <a class="link" href="https://campuse.ro/events/campus-party-italia-2017/workshop/il-continuous-engagement-nella-gestione-delle-community-off-line-fabio-arceri-cpit1/" target="_blank" >a speech about some community engagement experience and techniques</a>.</td>
+                                      	    </tr>
+                                      	    <tr>
+                                      	        <td><a class="link" href="#" onclick="currentSlide(5)"><img class="areaicon2" src="images/area_cont2_col.png"></a></td>
+                                      	        <td><a class="link" href="https://docs.google.com/presentation/d/1ExyWY8VdJjwDqnNF1-ixXxqf0REUaZpW_LQCjS9JbbQ/edit?usp=sharing" target="_blank">Presentation</a></td>
+                                      	    </tr>
+                                      	</table>
+                                    </div>
+                                </div>
+
+
+                              	<!-- Blocco principale -->
+                              	<hr style="border-top:1px solid lightgray">
+                               	<a name="job-swct"></a>
+                                <div class="main-block-exp">
+                                  	<!-- Blocco di testa -->
+                                    <div class="head-block-exp">
+                                      	<!-- Subject -->
+                                        <div class="subject">Mentorship for the event series "Startup Weekend Catania"</div>
+                                      	<!-- Cliente e periodo -->
+                                       	<span class="client">Catania, assoc. Youthub Catania</span>
+                                       	<span class="period">2016 – 2017</span>
+                                       	<div class="skills-summary"">
+                                       	    <table>
+                                       	        <tr>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(2)"><img class="areaicon2" src="images/area_cons2_bw.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(3)"><img class="areaicon2" src="images/area_org2_bw.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(4)"><img class="areaicon2" src="images/area_edu2_col.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(5)"><img class="areaicon2" src="images/area_cont2_bw.png"></a>
+                                       	            </td>
+                                       	        </tr>                                       	    
+                                       	    </table>
+                                       	</div>
+                                    </div>
+                                    <p>I got involved as one of the thirty mentors at the three-day event named "<a class="link" href="https://startupweekend.org/" target="_blank">Startup Weekend</a> Catania 2016".</p>
+                                  	<!-- Skills -->
+                                    <div class="skills-block-exp">
+                                      	<table>
+                                      	    <tr>
+                                      	        <td><a class="link" href="#" onclick="currentSlide(4)"><img class="areaicon2" src="images/area_edu2_col.png"></a></td>
+                                      	        <td>As a mentor, I helped attendees in focusing simply over the main characteristics of the problems they had to solve. In some cases, I helped someone out with algorithms in order to give their start-up's idea a strong foundation. I was finally awarded as the best mentor of the event.</td>
+                                      	    </tr>
+                                      	</table>
+                                    </div>
+                                </div>
+
+
+                              	<!-- Blocco principale -->
+                              	<hr style="border-top:1px solid lightgray">
+                               	<a name="job-grypto"></a>
+                                <div class="main-block-exp">
+                                  	<!-- Blocco di testa -->
+                                    <div class="head-block-exp">
+                                      	<!-- Subject -->
+                                        <div class="subject">Project "Grypto"<br><span style="font-size:12px">Encrypt your data by using a binary file as a key</span></div>
+                                      	<!-- Cliente e periodo -->
+                                       	<span class="client">Catania, personal project</span>
+                                       	<span class="period">2016</span>
+                                       	<div class="skills-summary"">
+                                       	    <table>
+                                       	        <tr>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(2)"><img class="areaicon2" src="images/area_cons2_col.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(3)"><img class="areaicon2" src="images/area_org2_bw.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(4)"><img class="areaicon2" src="images/area_edu2_bw.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(5)"><img class="areaicon2" src="images/area_cont2_bw.png"></a>
+                                       	            </td>
+                                       	        </tr>                                       	    
+                                       	    </table>
+                                       	</div>
+                                    </div>
+                                    <p>I wrote Grypto as a part of an hackathon I was designing for a GDG event (actually, the name "Grypto" stands for GDG encrypter). Grypto takes two arguments: the file to be encrypted (that is the target) and a binary file (that is the key), such as an image, a sound file, an executable, etc... In encryption mode it works by sequentially looking at every single byte inside the target file and trying to map each of them inside the key file, also collecting the respective positions. While collecting the positions, it builds, byte after byte, the encrypted file as an appropriate sequence of the distances between the collected positions, until the last position is processed. On the other hand, when in decryption mode, Grypto reads the distances stored into the encrypted file and finally retrieve the respective bytes into the key file, thus reconstructing the original target file.</p>
+                                  	<!-- Skills -->
+                                    <div class="skills-block-exp">
+                                      	<table>
+                                      	    <tr>
+                                      	        <td><a class="link" href="#" onclick="currentSlide(2)"><img class="areaicon2" src="images/area_cons2_col.png"></a></td>
+                                      	        <td><a class="link" href="https://drive.google.com/file/d/1a87fw0TL4rvKfNFjNTDXdmrS9Wzc66ug/view?usp=sharing" target="_blank">Zip archive</a></td>
+                                      	    </tr>
+                                      	</table>
+                                    </div>
+                                </div>
+
+                              	<!-- Blocco principale -->
+                              	<hr style="border-top:1px solid lightgray">
+                               	<a name="job-cs4hs"></a>
+                                <div class="main-block-exp">
+                                  	<!-- Blocco di testa -->
+                                    <div class="head-block-exp">
+                                      	<!-- Subject -->
+                                        <div class="subject">Lectures for the course "Computer Science for High Schools"<br><span style="font-size:12px">A 15k dollars grant funded by Google for bringing the computational thinking in high schools</span></div>
+                                      	<!-- Cliente e periodo -->
+                                       	<span class="client">Catania, Google for Education Program + University of Catania + GDG Catania</span>
+                                       	<span class="period">2015 – 2016</span>
+                                       	<div class="skills-summary"">
+                                       	    <table>
+                                       	        <tr>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(2)"><img class="areaicon2" src="images/area_cons2_col.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(3)"><img class="areaicon2" src="images/area_org2_col.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(4)"><img class="areaicon2" src="images/area_edu2_col.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(5)"><img class="areaicon2" src="images/area_cont2_col.png"></a>
+                                       	            </td>
+                                       	        </tr>                                       	    
+                                       	    </table>
+                                       	</div>
+                                    </div>
+                                    <p>CS4HS is about developing CS educators globally for today’s 21st century students. It is an annual funding program powered by Google to improve the computer science (CS) educational ecosystem by providing funding for the continuation of CS teacher professional development worldwide.</p>
+                                  	<!-- Skills -->
+                                    <div class="skills-block-exp">
+                                      	<table>
+                                      	    <tr>
+                                      	        <td><a class="link" href="#" onclick="currentSlide(2)"><img class="areaicon2" src="images/area_cons2_col.png"></a></td>
+                                      	        <td>Some Turing Machines, URM programs, and stuff like that.</td>
+                                      	    </tr>
+                                      	    <tr>
+                                      	        <td><a class="link" href="#" onclick="currentSlide(3)"><img class="areaicon2" src="images/area_org2_col.png"></a></td>
+                                      	        <td>I dealt with the typical aspects about a student class management plus the organization of a small end-of-course hackathon.</td>
+                                      	    </tr>
+                                      	    <tr>
+                                      	        <td><a class="link" href="#" onclick="currentSlide(4)"><img class="areaicon2" src="images/area_edu2_col.png"></a></td>
+                                      	        <td>Within the course I held a 7-meeting workshop about Computer Science/Engineering entitled <a class="link" href="https://sites.google.com/site/cs4hslabs3/home" target="_blank">"Computer Science and Engineering, a journey through complexity and optimization"</a>.</td>
+                                      	    </tr>
+                                      	    <tr>
+                                      	        <td><a class="link" href="#" onclick="currentSlide(5)"><img class="areaicon2" src="images/area_cont2_col.png"></a></td>
+                                      	        <td><a class="link" href="https://docs.google.com/presentation/d/1Vh1lL5DJbaqTDWkynkgpGZqiFmDNdTyfS8dbvCBQJAk/edit?usp=sharing" target="_blank">Lesson 2</a> • <a class="link" href="https://docs.google.com/presentation/d/1apxlXrkh7tNz1c-pxSjnq70L11PZI4c-LWR4dOnsOgA/edit?usp=sharing" target="_blank">Lessons 3-4-5</a> • <a class="link" href="https://docs.google.com/presentation/d/1z3nTZ-rD8A-l-O05w7F8tMppxCus5PwU3vrIB4CARJ8/edit?usp=sharing" target="_blank">Lessons 7</a></td>
+                                      	    </tr>
+                                      	</table>
+                                    </div>
+                                </div>        
+                                
+                              	<!-- Blocco principale -->
+                              	<hr style="border-top:1px solid lightgray">
+                               	<a name="job-yh"></a>
+                                <div class="main-block-exp">
+                                  	<!-- Blocco di testa -->
+                                    <div class="head-block-exp">
+                                      	<!-- Subject -->
+                                        <div class="subject">Job matchmaking platform<br><span style="font-size:12px">A possible system for searching the best candidates for a job position</span></div>
+                                      	<!-- Cliente e periodo -->
+                                       	<span class="client">Catania, assoc. Youthub Catania</span>
+                                       	<span class="period">2015</span>
+                                       	<div class="skills-summary"">
+                                       	    <table>
+                                       	        <tr>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(2)"><img class="areaicon2" src="images/area_cons2_col.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(3)"><img class="areaicon2" src="images/area_org2_bw.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(4)"><img class="areaicon2" src="images/area_edu2_bw.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(5)"><img class="areaicon2" src="images/area_cont2_col.png"></a>
+                                       	            </td>
+                                       	        </tr>                                       	    
+                                       	    </table>
+                                       	</div>
+                                    </div>
+                                    <p>In 2015 the guys of Youthub Catania told me about an interesting project they were about to face up, focused on studying and providing a reliable solution to the human resource scouting problem, that is well known for being a heavily time-consuming activity. This inspired me and raised my desire to explore this topic, so here it is the result.</p>
+                                  	<!-- Skills -->
+                                    <div class="skills-block-exp">
+                                      	<table>
+                                      	    <tr>
+                                      	        <td><a class="link" href="#" onclick="currentSlide(2)"><img class="areaicon2" src="images/area_cons2_col.png"></a></td>
+                                      	        <td>Basically, the entire work is a graph-theory-based model for solving the problem, with a pinch of fuzzy logic.</td>
+                                      	    </tr>
+                                      	    <tr>
+                                      	        <td><a class="link" href="#" onclick="currentSlide(5)"><img class="areaicon2" src="images/area_cont2_col.png"></a></td>
+                                      	        <td><a class="link" href="https://drive.google.com/file/d/1kw_4hqdbIeXuxMbUxGY1t8RlxUmafVx7/view?usp=sharing" target="_blank">Report</a></td>
+                                      	    </tr>
+                                      	</table>
+                                    </div>
+                                </div>                                                              
+
+                              	<!-- Blocco principale -->
+                              	<hr style="border-top:1px solid lightgray">
+                               	<a name="job-gyn"></a>
+                                <div class="main-block-exp">
+                                  	<!-- Blocco di testa -->
+                                    <div class="head-block-exp">
+                                      	<!-- Subject -->
+                                        <div class="subject">Project "Gynesia"<br><span style="font-size:12px">A healthcare digitization startup company project</span></div>
+                                      	<!-- Cliente e periodo -->
+                                       	<span class="client">Catania, personal project</span>
+                                       	<span class="period">2014 – 2015</span>
+                                       	<div class="skills-summary"">
+                                       	    <table>
+                                       	        <tr>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(2)"><img class="areaicon2" src="images/area_cons2_bw.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(3)"><img class="areaicon2" src="images/area_org2_col.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(4)"><img class="areaicon2" src="images/area_edu2_bw.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(5)"><img class="areaicon2" src="images/area_cont2_col.png"></a>
+                                       	            </td>
+                                       	        </tr>                                       	    
+                                       	    </table>
+                                       	</div>
+                                    </div>
+                                    <p>GYNESIA was a healthcare facilitation startup project having its focus on gynecology that aimed to assist doctors and patients in order both (1) to optimize the medical examination times and processes, and (2) to help patients following at best the medical advices.</p>
+                                  	<!-- Skills -->
+                                    <div class="skills-block-exp">
+                                      	<table>
+                                      	    <tr>
+                                      	        <td><a class="link" href="#" onclick="currentSlide(3)"><img class="areaicon2" src="images/area_org2_col.png"></a></td>
+                                      	        <td>As the project's <strong>founder</strong>, I spent much time into understanding how to apply the lean startup methodology to my team, organizing and leading meetings, and other management activities about people and tasks.</td>
+                                      	    </tr>
+                                      	    <tr>
+                                      	        <td><a class="link" href="#" onclick="currentSlide(5)"><img class="areaicon2" src="images/area_cont2_col.png"></a></td>
+                                      	        <td><a class="link" href="https://docs.google.com/presentation/d/1oPh-Ocaomwx7oyvK8lB78OCmYIJoxKYYR2wfE0hHDUg/edit?usp=sharing" target="_blank">7-slide elevator pitch (eng)</a> • <a class="link" href="https://drive.google.com/file/d/1_V1bzP41fdsuEl5wG1DvqPLTHnh7B1qM/view?usp=sharing" target="_blank">Full elevator pitch (ita)</a></td>
+                                      	    </tr>
+                                      	</table>
+                                    </div>
+                                </div>      
+  
+
+                              	<!-- Blocco principale -->
+                              	<hr style="border-top:1px solid lightgray">
+                               	<a name="job-bmf"></a>
+                                <div class="main-block-exp">
+                                  	<!-- Blocco di testa -->
+                                    <div class="head-block-exp">
+                                      	<!-- Subject -->
+                                        <div class="subject">A BMF-based multi-level marketing accounting system<br><span style="font-size:12px">A non-binary-tree node-insertion algorithm & library with very strong constraints</span></div>
+                                      	<!-- Cliente e periodo -->
+                                       	<span class="client">Catania, B.labs srl</span>
+                                       	<span class="period">2014</span>
+                                       	<div class="skills-summary"">
+                                       	    <table>
+                                       	        <tr>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(2)"><img class="areaicon2" src="images/area_cons2_col.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(3)"><img class="areaicon2" src="images/area_org2_bw.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(4)"><img class="areaicon2" src="images/area_edu2_bw.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(5)"><img class="areaicon2" src="images/area_cont2_col.png"></a>
+                                       	            </td>
+                                       	        </tr>                                       	    
+                                       	    </table>
+                                       	</div>
+                                    </div>
+                                    <p></p>
+                                  	<!-- Skills -->
+                                    <div class="skills-block-exp">
+                                      	<table>
+                                      	    <tr>
+                                      	        <td><a class="link" href="#" onclick="currentSlide(2)"><img class="areaicon2" src="images/area_cons2_col.png"></a></td>
+                                      	        <td>I built the tree-based data structure and the related algorithm, and implemented this model later by writing a C++/SQLite library from the scratch. Finally, I wrote a tiny C# wrapper in order to let my client free to integrate my lib into a .NET project.</td>
+                                      	    </tr>
+                                      	    <tr>
+                                      	        <td><a class="link" href="#" onclick="currentSlide(5)"><img class="areaicon2" src="images/area_cont2_col.png"></a></td>
+                                      	        <td><a class="link" href="https://drive.google.com/file/d/1MCMrwPfyFO9YRR4Gkt_Dm4W4GgAIC2BB/view?usp=sharing" target="_blank">Report</a></td>
+                                      	    </tr>
+                                      	</table>
+                                    </div>
+                                </div>                                                                                    
+
+
+                              	<!-- Blocco principale -->
+                              	<hr style="border-top:1px solid lightgray">
+                               	<a name="job-phy"></a>
+                                <div class="main-block-exp">
+                                  	<!-- Blocco di testa -->
+                                    <div class="head-block-exp">
+                                      	<!-- Subject -->
+                                        <div class="subject">Handbook series "Appunti di Fisica 1"<br><span style="font-size:12px"></span></div>
+                                      	<!-- Cliente e periodo -->
+                                       	<span class="client">Catania, progetto personale</span>
+                                       	<span class="period">2011</span>
+                                       	<div class="skills-summary"">
+                                       	    <table>
+                                       	        <tr>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(2)"><img class="areaicon2" src="images/area_cons2_bw.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(3)"><img class="areaicon2" src="images/area_org2_bw.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(4)"><img class="areaicon2" src="images/area_edu2_bw.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(5)"><img class="areaicon2" src="images/area_cont2_col.png"></a>
+                                       	            </td>
+                                       	        </tr>                                       	    
+                                       	    </table>
+                                       	</div>
+                                    </div>
+                                    <p>From the series "I just wanted to write some notes, but I ended up writing a book", here is what happens when you decide that it could be a good idea writing down on your PC anything's propedeutic for studying a certain matter. In this case, I wrote "some" Physics 1 stuff as a form of review/refresher to face up the study of Physics 2. Yeah, fool things. Ordinary administration 😜.
+                                    </p>
+                                  	<!-- Skills -->
+                                    <div class="skills-block-exp">
+                                      	<table>
+                                      	    <tr>
+                                      	        <td><a class="link" href="#" onclick="currentSlide(5)"><img class="areaicon2" src="images/area_cont2_col.png"></a></td>
+                                      	        <td><a class="link" href="https://drive.google.com/drive/folders/17p7U460vKzFLh6kGJx1tchrHgrXZbqvf?usp=sharing" target="_blank">Chapters 1-6</a></td>
+                                      	    </tr>
+                                      	</table>
+                                    </div>
+                                </div>                                                                   
+
+
+                              	<!-- Blocco principale -->
+                              	<hr style="border-top:1px solid lightgray">
+                               	<a name="job-ubuntu"></a>
+                                <div class="main-block-exp">
+                                  	<!-- Blocco di testa -->
+                                    <div class="head-block-exp">
+                                      	<!-- Subject -->
+                                        <div class="subject">Handbook "Ubuntu 10.10 “Maverik Meerkat”: mini-guida"<br><span style="font-size:12px">A short and practical first use guide to Ubuntu 10.10</span></div>
+                                      	<!-- Cliente e periodo -->
+                                       	<span class="client">Catania, personal project</span>
+                                       	<span class="period">2010</span>
+                                       	<div class="skills-summary"">
+                                       	    <table>
+                                       	        <tr>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(2)"><img class="areaicon2" src="images/area_cons2_bw.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(3)"><img class="areaicon2" src="images/area_org2_bw.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(4)"><img class="areaicon2" src="images/area_edu2_bw.png"></a>
+                                       	            </td>
+                                       	            <td><a class="link" href="#" onclick="currentSlide(5)"><img class="areaicon2" src="images/area_cont2_col.png"></a>
+                                       	            </td>
+                                       	        </tr>                                       	    
+                                       	    </table>
+                                       	</div>
+                                    </div>
+                                    <p>The handbook is an italian 60-page practical introduction for the user who is going to approach for the first time to install and access the Ubuntu operating system.</p>
+                                  	<!-- Skills -->
+                                    <div class="skills-block-exp">
+                                      	<table>
+                                      	    <tr>
+                                      	        <td><a class="link" href="#" onclick="currentSlide(5)"><img class="areaicon2" src="images/area_cont2_col.png"></a></td>
+                                      	        <td><a class="link" href="https://drive.google.com/file/d/1WFSu8l6c8x72OL91wpkXubJE0sp2z5rd/view?usp=sharing" target="_blank">Handbook</a></td>
+                                      	    </tr>
+                                      	</table>
+                                    </div>
+                                </div>
+
+                                
+                                <!-- end of the experiences -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!------------------------------ FOOTER SECTION ------------------------------>
+            <div id="lowsection" style="">
+                <img style="width:100%; height:2px; padding:0px; margin:0px; position:absolute; top:0px" src="images/colline.png">
+                <span class="footer">
+                <!--
+                    <a class="footer" target="_blank" href="https://goo.gl/BO8qpI" data-icon-text="Curriculum Vitae"><img class="footer" src="images/bw-cv.png" alt=""><img class="footer" src="images/cv.png" alt=""></a>-->
+                    <a class="footer" target="_self" href="fabio.arceriREMOVE@gmail.com" data-icon-text="fabio.arceri@gmail.com">
+                    <img alt="" class="footer" src="http://fabioarceri.altervista.org/images/bw-email.png" /><img alt="" class="footer" src="http://fabioarceri.altervista.org/images/email.png" />
+                    </a>                     
+                    <a class="footer" target="_blank" href="https://t.me/FabioArceri" data-icon-text="Telegram"><img class="footer" src="images/bw-telegram.png" alt=""><img class="footer" src="images/telegram.png" alt=""></a>
+                    <a class="footer" target="_blank" href="https://www.linkedin.com/in/fabioarceri" data-icon-text="LinkedIn"><img class="footer" src="images/bw-linkedin.png" alt=""><img class="footer" src="images/linkedin.png" alt=""></a>
+                    
+                    <a class="footer" target="_blank" href="https://fabioarceri.blogspot.it/" data-icon-text="Blogger"><img class="footer" src="images/bw-blogger.png" alt=""><img class="footer" src="images/blogger.png" alt=""></a>
+                    <a class="footer" target="_blank" href="https://medium.com/@fabio.arceri" data-icon-text="Medium"><img class="footer" src="images/bw-medium.png" alt=""><img class="footer" src="images/medium.png" alt=""></a>
+                    <a class="footer" target="_blank" href="https://twitter.com/fnarceri" data-icon-text="Twitter"><img class="footer" src="images/bw-twitter.png" alt=""><img class="footer" src="images/twitter.png" alt=""></a>                
+                    <a class="footer" target="_blank" href="https://www.facebook.com/nicolofabio.arceri" data-icon-text="Facebook"><img class="footer" src="images/bw-facebook.png" alt=""><img class="footer" src="images/facebook.png" alt=""></a>
+                                    
+                    <a class="footer" target="_self"  href="https://github.com/FabioArceri" data-icon-text="Github"><img class="footer" src="images/bw-github2.png" alt=""><img class="footer" src="images/github2.png" alt=""></a>
+                    <a class="footer" target="_blank" href="https://www.xmind.net/share/fabio.arceri" data-icon-text="XMind"><img class="footer" src="images/bw-xmind.png" alt=""><img class="footer" src="images/xmind.png" alt=""></a>
+                    <a class="footer" target="_blank" href="https://www.slideshare.net/nicolofabioarceri" data-icon-text="Slideshare"><img class="footer" src="images/bw-ssharelogo.png" alt=""><img class="footer" src="images/ssharelogo.png" alt=""></a>
+                </span>
+                <div id="copyr">Covidright :-P &copy; 2020 Fabio Arceri. All rights reserved.</div>
+            </div>            
+        </div>        
+
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            function plusSlides(n) { showSlides(slideIndex += n); }
+            function currentSlide(n) { showSlides(slideIndex = n); }
+            function showSlides(n)
+            {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) { slideIndex = 1 }
+              if (n < 1) { slideIndex = slides.length }
+              for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+              for (i = 0; i < dots.length; i++) { dots[i].className = dots[i].className.replace(" active", ""); }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+        </script>        
+                
+    </body>
 </html>
 
