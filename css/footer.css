@@ -28,8 +28,8 @@
         text-decoration: none;
         /*width:42px;*/
         width:50%;/* <--- IMPORTANTE! */    
-        margin-top:12px;
-        margin-bottom:-4px;
+        margin-top:0px;
+        margin-bottom:2px;
 
     }
 
@@ -147,7 +147,7 @@
     {
         a.footer
         {
-            margin-top:10px;
-            margin-bottom:-12px;
+            margin-top:8px;
+            margin-bottom:0px;
         }
     }
