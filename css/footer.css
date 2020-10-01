@@ -145,7 +145,8 @@
     {
         a.footer
         {
-            margin-top:12px;
+            background:blue;
+            margin-top:13px;
             margin-bottom:-4px;
         }
     }
