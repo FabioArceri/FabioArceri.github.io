@@ -141,6 +141,13 @@
 
     }
 
+    span.footer, a.footer
+    {
+        background:green;
+        margin-top:8px;
+        margin-bottom:2px;
+    }
+
     @media only screen and (orientation: portrait)
     {
         span.footer, a.footer
