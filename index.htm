@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fabio Arceri's home page</title>
-    <link rel="stylesheet" href="css/footer.css">    
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/slider.css">   
+    <link rel="stylesheet" href="vendor/splide/css/splide-core.min.css">
+    <link rel="stylesheet" href="vendor/splide/css/splide.min.css">
+    <script src="vendor/splide/js/splide.min.js"></script>
+    <script src="js/splide-init.js"></script>
 
     <style type="text/css">
     
@@ -121,7 +126,7 @@
     #sep1, #sep2
     {
         height:100%;
-        padding-left:10px;
+/*        padding-left:10px;*/
         border:0px; 
         background:lightgray;
         background:transparent;
@@ -129,9 +134,10 @@
     
     #sep1
     {
-        background:#eeeeee;
-        border-right:1px solid #f1f1f1;
-        border-right:2px dotted #A1A1A1;
+        /*background:#eeeeee;*/
+        background:transparent;
+        border-right:2px solid black; /*#f1f1f1;*/
+        /* border-right:2px dotted black;/*#A1A1A1;*/
     }
     
     #lowsection
@@ -329,6 +335,11 @@
         max-width:40px;
     }
 
+    .profpos {
+        background:#55000066; padding:0px; padding-top:5px; padding-bottom:5px; border-radius:6px 6px 6px 6px; line-height:21px;
+        padding-left:9px; padding-right:9px;
+    }
+
     @media only screen and (orientation: portrait)
     {
         .flex-direction
@@ -351,8 +362,9 @@
         #sep1, #sep2
         {
             /*display: none;*/
-            padding:0px;
-            height:20px;
+            padding:0;
+            /*height:20px;*/
+            height:0;
             width:100%;
             border:0px; 
             background:red;
@@ -360,9 +372,13 @@
         }
         #sep1
         {
+            /*
             background:#eeeeee;
             border-bottom:1px solid #f1f1f1;
             border-bottom:2px dotted #A1A1A1;
+            */            
+            background:transparent;
+            border-bottom:2px solid black;
         }
               
         #pic
@@ -417,20 +433,15 @@
         {
             margin-right:1px;
         }
+
         a.areaicon, img.areaicon
         {
             width:80%;
             min-width:40px;
         }        
-    }
-    
-    
-    </style>
-    
-    <link rel="stylesheet" href="css/slider.css">
 
-    <style>
-       
+    }
+           
     p.relw
     {
         background:#EEEEEE; padding:12px;
@@ -473,14 +484,17 @@
             <div id="csection" style="top:0px;" class="flex-direction">
 
                 <!------------------------------ PIC&BIO SECTION ------------------------------>
-                <div id="pic" style="flex-direction:column;" class="flex-direction">
+                <div id="pic" style="flex-direction:column; background-image:url('images/background.jpg'); background-size:cover; background-position: center top" class="flex-direction">
                     <img style="margin-top:32px;" src="images/fabiolinkedin.png">
-                    <div>
-                    <a class="link" href="index.htm"><span style="font-size:20px; color:#333333"><strong>Fabio Arceri</strong></span></a><br><br>
-                    <span>MASTER's DEGREE in <strong><a class="link" target="_blank" href="http://web.dmi.unict.it/">COMPUTER SCIENCE</a></strong><span><br>
-                    <span><img style="vertical-align:middle; width:58px; padding-top:4px;" src="images/gdg.png">&nbsp;&nbsp;&nbsp;<strong><a class="link" target="_blank" href="https://developers.google.com/community/gdg">COMMUNITY MANAGER</a></strong></span>
+                    <div style="color:white; display:flex; justify-content:center; align-items:center; flex-direction:column;">
+                        <span style="font-size:20px;"><strong><a class="link" style="color:white;" href="index.htm">Fabio Arceri</a></strong></span><br>
+                        <div class="profpos" style="width:max-content;">
+                            <span>MASTER's DEGREE in <strong><a class="link" style="color:white;" target="_blank" href="http://web.dmi.unict.it/">COMPUTER SCIENCE</a></strong><span><br>
+                            <span><img style="vertical-align:middle; width:58px; padding-top:4px; background:white; padding:3px; border-radius:2px 2px 2px 2px;" src="images/gdg.png">&nbsp;&nbsp;&nbsp;<strong><a class="link" style="color:white;" target="_blank" href="https://developers.google.com/community/gdg">COMMUNITY MANAGER</a></strong></span>
                     <!--
                     <span>In <span style="color:red">♥</span> with algorithms<span style="color:red">,</span> technical writing<span style="color:red">,</span> public speaking<span style="color:red">,</span> communities<span style="color:red">,</span> running<span style="color:red">,</span> joking<span style="color:red">,</span> pizza<span style="color:red">,</span> playing music<span style="color:red">,</span> retro-gaming<span style="color:red">,</span> and <a class="link" target="_blank" href="https://federicascarso.blogspot.com/"><strong>Federica</strong></a>.</span>-->
+                        </div>
+                        <br>
                     </div>                   
                 </div>
 
@@ -512,7 +526,7 @@
                             <!-- ***********************************************************************
                                                         SLIDE 1: HOME                                
                                  *********************************************************************** -->
-                            <div class="mySlides fade">
+                            <div class="mySlides slideSx" style="">
                               	<span style="font-size:200%; line-height:50px; ">Hey you :-)</span><br>
                               	<span style="line-height:150%; font-size:100%">My name is Fabio, I'm italian and I live in Catania. Although my specialties are basically about <a class="link" href="#top" onclick="currentSlide(2)"><strong>computer science</strong></a>, I'm also pretty fine at <a class="link" href="#top" onclick="currentSlide(5)"><strong>writing</strong></a>, <a class="link" href="#top" onclick="currentSlide(4)"><strong>teaching</strong></a>, creating optimized <a class="link" href="#top" onclick="currentSlide(3)"><strong>workflows</strong></a>, and managing <a class="link" href="#top" onclick="currentSlide(3)"><strong>workgroups</strong></a>. This space is meant to present <span style="color:#dd55ffff"><strong>what I may do for you</strong></span>, either as an individual or even as a company. So, let's get started with my skills' tour from the index below, if you so wished 😉</span><br><br>
 <!--
@@ -583,7 +597,7 @@
                             <!-- ***********************************************************************
                                                         SLIDE 2                                
                                  *********************************************************************** -->
-                            <div class="mySlides fade">
+                            <div class="mySlides slideSx">
                                 <div class="headImg" style="width:100%; text-align:center;">
                               	    <center><img class="areaicon" src="images/area_cons.png"></center>
                               	</div>
@@ -612,7 +626,7 @@
                             <!-- ***********************************************************************
                                                         SLIDE 3                               
                                  *********************************************************************** -->
-                            <div class="mySlides fade">
+                            <div class="mySlides slideSx">
                                 <div class="headImg" style="width:100%; text-align:center;">
                               	    <center><img class="areaicon" src="images/area_org.png"></center>
                               	</div>
@@ -641,7 +655,7 @@
                             <!-- ***********************************************************************
                                                         SLIDE 4                                
                                  *********************************************************************** -->
-                            <div class="mySlides fade">
+                            <div class="mySlides slideSx">
                                 <div class="headImg" style="width:100%; text-align:center;">
                               	    <center><img class="areaicon" src="images/area_edu.png"></center>
                               	</div>
@@ -670,7 +684,7 @@
                             <!-- ***********************************************************************
                                                         SLIDE 5                                
                                  *********************************************************************** -->
-                            <div class="mySlides fade">
+                            <div class="mySlides slideSx">
                                 <div class="headImg" style="width:100%; text-align:center;">
                               	    <center><img class="areaicon" src="images/area_cont.png"></center>
                               	</div>
@@ -691,7 +705,7 @@
                                                         SLIDE 6: EXPERIENCES
                                  *********************************************************************** -->
 
-                            <div class="mySlides fade">
+                            <div class="mySlides slideSx">
                                 <div class="headImg" style="width:100%; text-align:center;">
                                     <center><img class="areaicon" src="images/exp.png"></center>
                                 </div>
@@ -704,7 +718,7 @@
                                   	<!-- Blocco di testa -->
                                     <div class="head-block-exp">
                                       	<!-- Subject -->
-                                        <div class="subject">My personal blog<br><span style="font-size:12px">Chronicles of an emotional ♥ logipithecus.</span></div>
+                                        <div class="subject">My personal blog<br><span style="font-size:12px">Chronicles of an emotional logipithecus.</span></div>
                                       	<!-- Cliente e periodo -->
                                        	<span class="client">Catania, personal project</span>
                                        	<span class="period">2020 –&nbsp;<span style="color:red">now</span></span>
@@ -1341,21 +1355,38 @@
         </div>        
 
         <script>
+            var started = false;
             var slideIndex = 1;
             showSlides(slideIndex);
-            function plusSlides(n) { showSlides(slideIndex += n); }
-            function currentSlide(n) { showSlides(slideIndex = n); }
-            function showSlides(n)
+            function plusSlides(n)
+            {
+                showSlides(slideIndex += n, n);
+            }
+
+            function currentSlide(n) { showSlides(slideIndex = n, 0); }
+
+            function showSlides(n, direction)
             {
               var i;
               var slides = document.getElementsByClassName("mySlides");
               var dots = document.getElementsByClassName("dot");
+
               if (n > slides.length) { slideIndex = 1 }
               if (n < 1) { slideIndex = slides.length }
-              for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+
+              for (i = 0; i < slides.length; i++)
+              {
+                slides[i].style.display = "none";
+/*                slides[i].className = "mySlides";*/
+              }
               for (i = 0; i < dots.length; i++) { dots[i].className = dots[i].className.replace(" active", ""); }
-              slides[slideIndex-1].style.display = "block";  
+
+              if (direction==1) slides[slideIndex-1].className = "mySlides slideSx";
+              else if (direction==-1) slides[slideIndex-1].className = "mySlides slideDx"; else slides[slideIndex-1].className = "mySlides slideUp";
+              slides[slideIndex-1].style.display = "block";                          
+              
               dots[slideIndex-1].className += " active";
+              started = true;
             }
         </script>        
                 
