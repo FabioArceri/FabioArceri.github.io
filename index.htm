@@ -69,11 +69,12 @@
           
     #pic, #text
     {
-        font-size:14px;
         font-family:ubuntu;
         background:transparent;
         padding:0px;
         width:100%;
+        line-height:26px;
+        font-size:110%;
 /*        position: relative;*/
         /*
         */
@@ -85,8 +86,8 @@
     #text
     {
         overflow:auto;
-        height:100%;
-        height:72%;
+        height:85%;
+/*        height:72%;*/
         display:flex;
         justify-content:center;
         align-items:top;
@@ -116,11 +117,11 @@
 
     #pic div
     {        
-        font-size:13px;
+/*        font-size:97%;*/
         font-family:ubuntu;
         text-align:center;
-        width:95%;
-        max-width:516px;
+        width:auto;
+/*        max-width:516px;        */
     }
 
     #sep1, #sep2
@@ -246,23 +247,34 @@
     }
     
     .skill-desc
-    {
-        line-height:150%; font-size:100%; text-align:left;        
+    {/*
+        line-height:150%;
+        font-size:100%;*/
+        text-align:left;
     }
        
-    .subject
+    div.subject
     {
         font-family: ubuntu;
-        font-size:18px;
+        font-size:140%;
         font-weight:bold;
         background: darkcyan;
         width:100%;
         color:white;
         text-align:center;
-        padding:4px;
+        padding:8px;
         -webkit-border-radius: 6px;
         -moz-border-radius: 6px;
+        line-height:26px;
 /*        line-height:26px;*/
+    }
+    
+    div.subject span
+    {
+        font-size:70%;
+        font-weight:normal;
+        line-height:0;
+        padding:0;
     }
     
     .skills-block-exp
@@ -338,10 +350,51 @@
     .profpos {
         background:#55000066; padding:0px; padding-top:5px; padding-bottom:5px; border-radius:6px 6px 6px 6px; line-height:21px;
         padding-left:9px; padding-right:9px;
+        width:max-content;
+        font-size:100%;
+        width:90%;
+    }
+    
+    #heyyou
+    {
+        font-size:150%; line-height:60px;
     }
 
-    @media only screen and (orientation: portrait)
+    @media only screen and (max-width: 880px)
     {
+        #heyyou
+        {
+            font-size:140%; line-height:60px;
+        }
+    
+        #text
+        {        
+            height:72%;
+            font-size:95%;
+            line-height:24px;
+        }
+        
+        .profpos
+        {
+            font-size:76%;
+            width:90%;
+        }
+        
+        .skill-desc
+        {
+/*            font-size:150%;*/
+        }
+    }
+    
+    @media only screen and (orientation: portrait)
+    {    
+
+        .profpos
+        {
+            font-size:75%;
+            width:90%;
+        }
+
         .flex-direction
         {
             flex-direction:column;
@@ -393,11 +446,21 @@
             min-width:50px;
         }
 
+        #heyyou
+        {
+            font-size:140%; line-height:60px;
+        }
+
         #text
         {
-            background:transparent;
-            color:black;
+            /*background:transparent;
+            color:black;*/
             height:130%;
+            height:72%;
+            font-size:95%;
+            line-height:24px;
+
+/*            line-height:120%; font-size:120%*/
         }
 
         #lowsection
@@ -488,7 +551,7 @@
                     <img style="margin-top:32px;" src="images/fabiolinkedin.png">
                     <div style="color:white; display:flex; justify-content:center; align-items:center; flex-direction:column;">
                         <span style="font-size:20px;"><strong><a class="link" style="color:white;" href="index.htm">Fabio Arceri</a></strong></span><br>
-                        <div class="profpos" style="width:max-content;">
+                        <div class="profpos" style="">
                             <span>MASTER's DEGREE in <strong><a class="link" style="color:white;" target="_blank" href="http://web.dmi.unict.it/">COMPUTER SCIENCE</a></strong><span><br>
                             <span><img style="vertical-align:middle; width:58px; padding-top:4px; background:white; padding:3px; border-radius:2px 2px 2px 2px;" src="images/gdg.png">&nbsp;&nbsp;&nbsp;<strong><a class="link" style="color:white;" target="_blank" href="https://developers.google.com/community/gdg">COMMUNITY MANAGER</a></strong></span>
                     <!--
@@ -519,16 +582,16 @@
                 </div>                               
                 
                 <!------------------------------ SLIDES' SECTION ------------------------------>
-                <div id="text">
+                <div id="text" style="">
                     <div style="background:transparent; width:90%;">                                        
                         <div class="slideshow-container" style="padding-left:5%; padding-right:5%;">
                             <a name="top"></a>
                             <!-- ***********************************************************************
                                                         SLIDE 1: HOME                                
                                  *********************************************************************** -->
-                            <div class="mySlides slideSx" style="">
-                              	<span style="font-size:200%; line-height:50px; ">Hey you :-)</span><br>
-                              	<span style="line-height:150%; font-size:100%">My name is Fabio, I'm italian and I live in Catania. Although my specialties are basically about <a class="link" href="#top" onclick="currentSlide(2)"><strong>computer science</strong></a>, I'm also pretty fine at <a class="link" href="#top" onclick="currentSlide(5)"><strong>writing</strong></a>, <a class="link" href="#top" onclick="currentSlide(4)"><strong>teaching</strong></a>, creating optimized <a class="link" href="#top" onclick="currentSlide(3)"><strong>workflows</strong></a>, and managing <a class="link" href="#top" onclick="currentSlide(3)"><strong>workgroups</strong></a>. This space is meant to present <span style="color:#dd55ffff"><strong>what I may do for you</strong></span>, either as an individual or even as a company. So, let's get started with my skills' tour from the index below, if you so wished 😉</span><br><br>
+                            <div class="mySlides slideSx" id="home">
+                              	<span id="heyyou" style=""><strong>Hey you :-)</strong></span><br>
+                              	<span style="">My name is Fabio, I'm italian and I live in Catania. Although my specialties are basically about <a class="link" href="#top" onclick="currentSlide(2)"><strong>computer science</strong></a>, I'm also pretty fine at <a class="link" href="#top" onclick="currentSlide(5)"><strong>writing</strong></a>, <a class="link" href="#top" onclick="currentSlide(4)"><strong>teaching</strong></a>, creating optimized <a class="link" href="#top" onclick="currentSlide(3)"><strong>workflows</strong></a>, and managing <a class="link" href="#top" onclick="currentSlide(3)"><strong>workgroups</strong></a>. This space is meant to present <span style="color:#dd55ffff"><strong>what I may do for you</strong></span>, either as an individual or even as a company. So, let's get started with my skills' tour from the index below, if you so wished 😉</span><br><br>
 <!--
 <a class="footer" target="_self" href="fabio.arceriREMOVE@gmail.com" data-icon-text="fabio.arceri@gmail.com">
    <img alt="" class="footer" src="images/bw-email.png" />
@@ -537,7 +600,7 @@
                             <span class="footer" style=""><center>
                               	<table class="mainpagetable" style="width:90%; padding:0; margin:0;">
                               	    <tr>
-                              	        <td style="width:22%">
+                              	        <td style="width:18%">
                               	            <center><a class="footer" style="width:100%; padding:0; margin:0;" href="#top" onclick="currentSlide(2)" data-icon-text="Consultance">
                               	                <img class="footer" style="width:100%;" src="images/area_cons2_bw.png">
                               	                <img class="footer" style="width:100%;" src="images/area_cons2_col.png">
@@ -546,7 +609,7 @@
                               	        <td style=""></td>
                               	        <td style=""></td>
                               	        <td style=""></td>
-                              	        <td style="width:22%">
+                              	        <td style="width:18%">
                               	            <center><a class="footer" style="width:100%; padding:0; margin:0;" href="#top" onclick="currentSlide(3)" data-icon-text="Organization">
                               	                <img class="footer" style="width:100%;" src="images/area_org2_bw.png">
                               	                <img class="footer" style="width:100%;" src="images/area_org2_col.png">
@@ -563,7 +626,7 @@
                               	    <tr style="">
                               	        <td></td>
                               	        <td></td>
-                              	        <td><center><a style="width:100%; padding:0; margin:0;" href="#top" onclick="currentSlide(6)"><img style="width:100%;" src="images/exp.png"></a></center></td>
+                              	        <td><center><a style="width:100%; padding:0; margin:0;" href="#top" onclick="currentSlide(6)"><img style="width:60%;" src="images/exp.png"></a></center></td>
                               	        <td></td>
                               	        <td></td>
                               	    </tr>
@@ -690,7 +753,7 @@
                               	</div>
                               	<br>
                               	<hr style="border-top:1px solid lightgray">
-                              	<p class="skill-desc"><div style="color:#ff0000;"><strong>BLOGPOSTS • ARTICLES</strong></div><br>I love writing, really. It's just all I can say. Whether it's an article, a handout, a presentation, a handbook, a book, it doesn't really matter. I love writing, a lot. So, do not hesitate to write to me if you wish me to...  write for you 😜.</p>
+                              	<p class="skill-desc"><div style="color:#ff0000;"><strong>BLOGPOSTS • ARTICLES</strong></div>I love writing, really. It's just all I can say. Whether it's an article, a handout, a presentation, a handbook, a book, it doesn't really matter. I love writing, a lot. So, do not hesitate to write to me if you wish me to...  write for you 😜.</p>
                               	<p class="relw"><strong>Some nice related works:</strong> <a class="link" href="#job-blog" onclick="currentSlide(6)">My blog</a></p>
                               	
                               	<p class="skill-desc"><span style="color:#ff0000"><strong>SLIDE PRESENTATIONS</strong></span><br>Same as above.</p>                              	
@@ -718,7 +781,7 @@
                                   	<!-- Blocco di testa -->
                                     <div class="head-block-exp">
                                       	<!-- Subject -->
-                                        <div class="subject">My personal blog<br><span style="font-size:12px">Chronicles of an emotional logipithecus.</span></div>
+                                        <div class="subject">My personal blog<br><span style="">Chronicles of an emotional logipithecus.</span></div>
                                       	<!-- Cliente e periodo -->
                                        	<span class="client">Catania, personal project</span>
                                        	<span class="period">2020 –&nbsp;<span style="color:red">now</span></span>
@@ -765,7 +828,7 @@
                                   	<!-- Blocco di testa -->
                                     <div class="head-block-exp">
                                       	<!-- Subject -->
-                                        <div class="subject">Project "Beonbuy"<br><span style="font-size:12px">Find the shop closest to you that is selling what you are searching for</span></div>
+                                        <div class="subject">Project "Beonbuy"<br><span style="">Find the shop closest to you that is selling what you are searching for</span></div>
                                       	<!-- Cliente e periodo -->
                                        	<span class="client">Catania, Beonbuy srls</span>
                                        	<span class="period">2018 –&nbsp;<span style="color:red">now</span></span>
@@ -815,7 +878,7 @@
                                   	<!-- Blocco di testa -->
                                     <div class="head-block-exp">
                                       	<!-- Subject -->
-                                        <div class="subject">GDG Catania management<br><span style="font-size:12px">GDG DevFests • Google I/O Extendeds • Other meetups, courses, conferences, ecc...</span></div>
+                                        <div class="subject">GDG Catania management<br><span style="">GDG DevFests • Google I/O Extendeds • Other meetups, courses, conferences, ecc...</span></div>
                                       	<!-- Cliente e periodo -->
                                        	<span class="client">Catania, Google Developer Community Programs</span>
                                        	<span class="period">2014 –&nbsp;<span style="color:red">now</span></span>
@@ -866,7 +929,7 @@
                                   	<!-- Blocco di testa -->
                                     <div class="head-block-exp">
                                       	<!-- Subject -->
-                                        <div class="subject">Thesis "SOFTWARE-DEFINED NETWORKING (SDN): UN NUOVO APPROCCIO ALLE ARCHITETTURE DI RETE"<br><span style="font-size:12px"></span></div>
+                                        <div class="subject">Thesis "SOFTWARE-DEFINED NETWORKING (SDN): UN NUOVO APPROCCIO ALLE ARCHITETTURE DI RETE"<br><span style=""></span></div>
                                       	<!-- Cliente e periodo -->
                                        	<span class="client">Catania, personal project</span>
                                        	<span class="period">2018</span>
@@ -1034,7 +1097,7 @@
                                   	<!-- Blocco di testa -->
                                     <div class="head-block-exp">
                                       	<!-- Subject -->
-                                        <div class="subject">Project "Grypto"<br><span style="font-size:12px">Encrypt your data by using a binary file as a key</span></div>
+                                        <div class="subject">Project "Grypto"<br><span style="">Encrypt your data by using a binary file as a key</span></div>
                                       	<!-- Cliente e periodo -->
                                        	<span class="client">Catania, personal project</span>
                                        	<span class="period">2016</span>
@@ -1072,7 +1135,7 @@
                                   	<!-- Blocco di testa -->
                                     <div class="head-block-exp">
                                       	<!-- Subject -->
-                                        <div class="subject">Lectures for the course "Computer Science for High Schools"<br><span style="font-size:12px">A 15k dollars grant funded by Google for bringing the computational thinking in high schools</span></div>
+                                        <div class="subject">Lectures for the course "Computer Science for High Schools"<br><span style="">A 15k dollars grant funded by Google for bringing the computational thinking in high schools</span></div>
                                       	<!-- Cliente e periodo -->
                                        	<span class="client">Catania, Google for Education Program + University of Catania + GDG Catania</span>
                                        	<span class="period">2015 – 2016</span>
@@ -1122,7 +1185,7 @@
                                   	<!-- Blocco di testa -->
                                     <div class="head-block-exp">
                                       	<!-- Subject -->
-                                        <div class="subject">Job matchmaking platform<br><span style="font-size:12px">A possible system for searching the best candidates for a job position</span></div>
+                                        <div class="subject">Job matchmaking platform<br><span style="">A possible system for searching the best candidates for a job position</span></div>
                                       	<!-- Cliente e periodo -->
                                        	<span class="client">Catania, assoc. Youthub Catania</span>
                                        	<span class="period">2015</span>
@@ -1164,7 +1227,7 @@
                                   	<!-- Blocco di testa -->
                                     <div class="head-block-exp">
                                       	<!-- Subject -->
-                                        <div class="subject">Project "Gynesia"<br><span style="font-size:12px">A healthcare digitization startup company project</span></div>
+                                        <div class="subject">Project "Gynesia"<br><span style="">A healthcare digitization startup company project</span></div>
                                       	<!-- Cliente e periodo -->
                                        	<span class="client">Catania, personal project</span>
                                        	<span class="period">2014 – 2015</span>
@@ -1207,7 +1270,7 @@
                                   	<!-- Blocco di testa -->
                                     <div class="head-block-exp">
                                       	<!-- Subject -->
-                                        <div class="subject">A BMF-based multi-level marketing accounting system<br><span style="font-size:12px">A non-binary-tree node-insertion algorithm & library with very strong constraints</span></div>
+                                        <div class="subject">A BMF-based multi-level marketing accounting system<br><span style="">A non-binary-tree node-insertion algorithm & library with very strong constraints</span></div>
                                       	<!-- Cliente e periodo -->
                                        	<span class="client">Catania, B.labs srl</span>
                                        	<span class="period">2014</span>
@@ -1250,7 +1313,7 @@
                                   	<!-- Blocco di testa -->
                                     <div class="head-block-exp">
                                       	<!-- Subject -->
-                                        <div class="subject">Handbook series "Appunti di Fisica 1"<br><span style="font-size:12px"></span></div>
+                                        <div class="subject">Handbook series "Appunti di Fisica 1"<br><span style=""></span></div>
                                       	<!-- Cliente e periodo -->
                                        	<span class="client">Catania, personal project</span>
                                        	<span class="period">2011</span>
@@ -1290,7 +1353,7 @@
                                   	<!-- Blocco di testa -->
                                     <div class="head-block-exp">
                                       	<!-- Subject -->
-                                        <div class="subject">Handbook "Ubuntu 10.10 “Maverik Meerkat”: mini-guida"<br><span style="font-size:12px">A short and practical first use guide to Ubuntu 10.10</span></div>
+                                        <div class="subject">Handbook "Ubuntu 10.10 “Maverik Meerkat”: mini-guida"<br><span style="">A short and practical first use guide to Ubuntu 10.10</span></div>
                                       	<!-- Cliente e periodo -->
                                        	<span class="client">Catania, personal project</span>
                                        	<span class="period">2010</span>
