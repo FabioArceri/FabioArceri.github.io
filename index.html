@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html >
+	<head>
+		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Fabio Arceri</title>
+		
+		<style type="text/css">
+		
+		/************************************************************************************/
+		html, body
+		{
+			height: 100%;
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			flex-direction:row;
+			#background:yellow;
+		}
+		
+		/************************************************************************************/
+		div.main
+		{
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			flex-direction:column;
+			#background:green;
+		}
+
+		/************************************************************************************/
+		div.other
+		{
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			flex-direction:row;
+			#background:green;
+		}
+
+		/************************************************************************************/
+		table
+		{
+			width:28%;
+			text-decoration: none;
+		}		
+		tr.colLine > td {
+			/*background:yellow;*/
+			line-height:0px;
+			height:3px;
+			width:30px;
+		}
+		tr.blank {
+			border:0px solid black;
+			height:10px;
+			background:transparent
+		}
+		tr.blank > td {
+			line-height:0px;
+			height:10px
+		}
+		
+		/************************************************************************************/
+		#name {
+            color:#000000;
+            font-size:16px;
+            font-family:ubuntu;
+            font-size:13px;
+		}
+		
+		</style>
+		
+	</head>
+	<body>
+		<div class="main">
+			<img style="width:30%" src="/media/fabio/A_0__UDATA/2. LIFE ACTIVITIES/ON DRIVE/1. ACTIVITY @ SCOPE/@ OMO/fabioarceri.github.io/fabio_newpic.png">
+			<br>
+			<table cellpadding="0" cellspacing="0" border="0px solid black">
+				<!-- coloured line -->
+				<tr class="colLine">
+					<td style="background:#3170bf;"></td>
+					<td style="background:#3170bf;"></td>
+					<td style="background:#6a9ad6;"></td>
+					<td style="background:#b1cdf0;"></td>
+					<td style="background:#e4ecf5;"></td>
+				</tr>
+				
+				<!-- info -->
+				<tr class="blank">
+					<td colspan="5" align="center">						
+						<span style="line-height:30px">&nbsp;</span><br>
+						<span id="name" style="font-size:24px;"><strong>N. Fabio <span style="color:#808080">Arceri</span></strong></span><br>
+						<span style="line-height:46px">&nbsp;</span><br>
+						<span style="">A PhD Student<br>in Computer Science</span>
+						<span style="line-height:36px">&nbsp;</span><br>
+					</td>
+				</tr>
+			</table>
+			<br>
+			<div class="other" style="color:#aaaaaa"><span style="font-size:30px; font-weight:bold">{</span><span>&nbsp;<i>site under construction</i>&nbsp;</span><span style="font-size:30px; font-weight:bold">}</span></div>
+		</div>
+	</body>
+</html>
